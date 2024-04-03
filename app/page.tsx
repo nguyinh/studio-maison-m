@@ -1,7 +1,8 @@
 export default function Home() {
   return (
-    <main className="font-chango">
-      <span>Hello Samsam ! Y&rsquo;a pas grand chose pour le moment</span>
+    <main>
+      <h2 className="font-chango">Studio Maison M</h2>
+      <p className="font-grotesk">Appelez svp c&rsquo;est cool comme ça: 👍</p>
     </main>
   );
 }
