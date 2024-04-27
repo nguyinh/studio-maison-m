@@ -1,11 +1,7 @@
 import type { Metadata } from "next";
-import { Inter, Chango } from "next/font/google";
+import { Chango } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
-import logo from "@/images/logo.svg";
-import LanguageToggle from "@/components/LanguageToggle";
-import Image from "next/image";
-import Link from "next/link";
 
 const chango = Chango({
   weight: "400",
@@ -53,23 +49,6 @@ export default function RootLayout({
       <body
         className={`${cabinetGrotesk.variable} ${chango.variable} font-sans`}
       >
-        {/* TODO shrink on scroll */}
-        <nav className="flex flex-col gap-2 p-2 bg-main-background border-b-black border-b-2">
-          <div className="flex flex-row gap-14 justify-center">
-            <Link href="/studio">
-              <Image priority src={logo} alt="Studio Maison M logo" />
-            </Link>
-          </div>
-
-          <div className="flex flex-row gap-14 justify-center font-grotesk font-extrabold items-center">
-            <Link href="/booking">Book a session</Link>
-            <Link href="/gear">Gear</Link>
-            <Link href="/remote-recording">Remote Recording</Link>
-            <Link href="/about">About</Link>
-            <LanguageToggle />
-          </div>
-        </nav>
-
         {children}
       </body>
     </html>

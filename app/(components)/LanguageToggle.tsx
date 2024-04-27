@@ -1,25 +1,41 @@
 "use client";
 
-import { useState } from "react";
-
 import toggleEn from "@/images/toggle-en.png";
 import toggleFr from "@/images/toggle-fr.png";
 import Image from "next/image";
 
-export default function LanguageToggle() {
-  const [language, setLanguage] = useState<"fr" | "en">("fr");
+import { usePathname, useRouter } from "next/navigation";
+import { SupportedLocales } from "../[lang]/dictionaries";
 
-  return language === "fr" ? (
+export default function LanguageToggle({
+  currentLocale,
+}: {
+  currentLocale: SupportedLocales;
+}) {
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const switchTo = (newLocale: SupportedLocales) => {
+    const [_, currentLocale, ...rest] = pathname.split("/");
+    console.log(`/${newLocale}/${rest.join("/")}`);
+    router.push(`/${newLocale}/${rest.join("/")}`);
+  };
+
+  return currentLocale === "fr" ? (
     <Image
-      src={toggleEn}
+      src={toggleFr}
       alt="Switch to english"
-      onClick={() => setLanguage("en")}
+      onClick={() => {
+        switchTo("en");
+      }}
     />
   ) : (
     <Image
-      src={toggleFr}
+      src={toggleEn}
       alt="Switch to french"
-      onClick={() => setLanguage("fr")}
+      onClick={() => {
+        switchTo("fr");
+      }}
     />
   );
 }
