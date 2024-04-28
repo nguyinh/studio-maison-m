@@ -2,7 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { SupportedLocales, getDictionary } from "./dictionaries";
 import logo from "@/images/logo.svg";
+import burgerMenu from "@/images/burger-menu.svg";
 import LanguageToggle from "@/components/LanguageToggle";
+import MobileMenuContent from "../(components)/MobileMenuContent";
 
 interface PageParams {
   params: { lang: SupportedLocales };
@@ -16,17 +18,28 @@ export default async function Layout({
     children: React.ReactNode;
   } & PageParams
 >) {
+  const dict = await getDictionary(lang);
+
   return (
     <>
       {/* TODO shrink on scroll */}
-      <nav className="flex flex-col gap-2 p-2 bg-main-background border-b-black border-b-2 sticky z-10">
-        <div className="flex flex-row gap-14 justify-center">
-          <Link href="/studio">
-            <Image priority src={logo} alt="Studio Maison M logo" />
+      <nav className="flex flex-col gap-2 bg-main-background border-b-black border-b-2 sticky z-10 sm:p-2 p-4">
+        <div className="flex flex-row gap-14 justify-center relative">
+          <Link href="/studio" className="flex justify-center">
+            <Image
+              priority
+              src={logo}
+              alt="Studio Maison M logo"
+              className="sm:max-w-full max-w-[50%]"
+            />
           </Link>
+
+          <div className="sm:hidden absolute right-2 h-full flex">
+            <Image src={burgerMenu} alt="Menu burger" />
+          </div>
         </div>
 
-        <div className="flex flex-row gap-14 justify-center font-grotesk font-extrabold items-center">
+        <div className="hidden sm:flex flex-row gap-14 justify-center font-grotesk font-extrabold items-center">
           <Link href="/booking">Book a session</Link>
           <Link href="/gear">Gear</Link>
           <Link href="/remote-recording">Remote Recording</Link>
@@ -34,6 +47,13 @@ export default async function Layout({
           <LanguageToggle currentLocale={lang} />
         </div>
       </nav>
+
+      <MobileMenuContent
+        bookSession={dict.navbar.booking}
+        gear={dict.navbar.gear}
+        remoteRecording={dict.navbar.remoteRecording}
+        about={dict.navbar.about}
+      />
 
       {children}
     </>
