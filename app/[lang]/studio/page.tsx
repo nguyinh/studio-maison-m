@@ -9,9 +9,5 @@ export default async function Studio({
 }: Readonly<PageParams>) {
   const dict = await getDictionary(lang);
 
-  return (
-    <div className="bg-main-background">
-      Un studio bien vide {dict.studio.title}
-    </div>
-  );
+  return <div className="bg-main-background">Un studio bien vide</div>;
 }
