@@ -19,7 +19,7 @@
     ],
     "paths": {
       "@/*": ["./*"],
-      "@/components/*": ["./app/(components)/*"],
+      "@/components/*": ["./app/(components)/*", "./components/*"],
       "@/dictionaries/*": ["./[lang]/*"],
       "@/images/*": ["./public/svg/*", "./public/png/*"]
     }

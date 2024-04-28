@@ -1,5 +1,34 @@
 {
   "studio": {
-    "title": "Bonjour monde !"
+    "studioSounds": "Sons du studio"
+  },
+  "navbar": {
+    "booking": "Réserver une session",
+    "gear": "Equipement",
+    "remoteRecording": "Remote Recording",
+    "about": "A propos"
+  },
+  "contact": {
+    "callUs": "Call us",
+    "sendEmail": "Or send us an email"
+  },
+  "faq": {
+    "title": "FAQ",
+    "question1": "I don't know what my project needs, can I still book a session ?",
+    "answer1": "I don't know what my project needs, can I still book a session ?",
+    "question2": "Can we record a whole band at the same time ?",
+    "answer2": "Can we record a whole band at the same time ?",
+    "question3": "Is this only a recording studio ?",
+    "answer3": "Is this only a recording studio ?"
+  },
+  "gear": {
+    "description": "Here you can select some microphones or instruments you want to use for your session if you're curious about how they sound. Don't worry if you don't know I'll pick the right ones ;)"
+  },
+  "remoteRecording": {
+    "description": "Remote recording allows you to work with me without having to move from the comfort of your home (or from the bahamas). Just get straight in touch with me and tell me what you'd like for your project :D"
+  },
+  "about": {
+    "title": "About",
+    "description": "Studio Maison M was founded by non-other than the drummer Sami ROGER in 2021. After 2 years of work and testing, it opened in 2023. It is located in Bondy, close enough to Paris to be accessible but still far enough to be able to make band practice or loudv music playing possible at all times. Its constant evolution and new recording gears and instruments make it the perfect place to experiment and let your ideas flow without boundaries. Get ready to find weird instruments and stuff you won't find in an ordinary recording studio. You'll feel instantly home and cosy in this well decorated studio, the home you wish you could be in forever!"
   }
 }

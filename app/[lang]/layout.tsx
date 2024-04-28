@@ -19,7 +19,7 @@ export default async function Layout({
   return (
     <>
       {/* TODO shrink on scroll */}
-      <nav className="flex flex-col gap-2 p-2 bg-main-background border-b-black border-b-2">
+      <nav className="flex flex-col gap-2 p-2 bg-main-background border-b-black border-b-2 sticky z-10">
         <div className="flex flex-row gap-14 justify-center">
           <Link href="/studio">
             <Image priority src={logo} alt="Studio Maison M logo" />
