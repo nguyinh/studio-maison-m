@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Chango, Outfit } from "next/font/google";
 import localFont from "next/font/local";
+import { Providers } from "@/contexts/Providers";
 import "./globals.css";
 
 const chango = Chango({
@@ -54,7 +55,7 @@ export default function RootLayout({
       <body
         className={`${cabinetGrotesk.variable} ${outfit.variable} ${chango.variable} font-sans`}
       >
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

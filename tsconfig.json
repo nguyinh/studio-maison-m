@@ -21,7 +21,8 @@
       "@/*": ["./*"],
       "@/components/*": ["./app/(components)/*", "./components/*"],
       "@/dictionaries/*": ["./[lang]/*"],
-      "@/images/*": ["./public/svg/*", "./public/png/*"]
+      "@/images/*": ["./public/svg/*", "./public/png/*"],
+      "@/contexts/*": ["./app/(contexts)/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

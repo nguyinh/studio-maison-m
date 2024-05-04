@@ -7,6 +7,9 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Link from "next/link";
+import { useContext } from "react";
+import { MenuContext } from "@/contexts/MenuContext";
+import { cn } from "@/lib/utils";
 
 interface IProps {
   bookSession: string;
@@ -21,8 +24,20 @@ export default function MobileMenuContent({
   remoteRecording,
   about,
 }: IProps) {
+  const { isMobileMenuOpen, setIsMobileMenuOpen } = useContext(MenuContext);
+
+  const closeMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
-    <div className="font-grotesk font-extrabold *:min-h-10 *:px-4 sm:hidden">
+    <div
+      className={cn(
+        "font-grotesk overflow-hidden font-extrabold *:min-h-10 *:px-4 sm:hidden absolute w-full z-50 transition-[max-height] duration-500 ease-in-out",
+        isMobileMenuOpen ? "max-h-[100%]" : "max-h-0"
+      )}
+      onClick={closeMenu}
+    >
       <Link
         href="/booking"
         className="bg-booking flex justify-start items-center border-b-[1px] border-black"
@@ -35,7 +50,10 @@ export default function MobileMenuContent({
         className="bg-background-gear-1 border-b-[1px] border-black"
       >
         <AccordionItem value="gear">
-          <AccordionTrigger className="font-grotesk font-extrabold">
+          <AccordionTrigger
+            className="font-grotesk font-extrabold"
+            onClick={(event) => event.stopPropagation()}
+          >
             {gear}
           </AccordionTrigger>
           <AccordionContent>
@@ -55,7 +73,6 @@ export default function MobileMenuContent({
       >
         {about}
       </Link>
-      TODO: Menu à relier au burger icon
     </div>
   );
 }
