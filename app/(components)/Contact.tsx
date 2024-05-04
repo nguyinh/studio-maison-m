@@ -1,14 +1,20 @@
 import { SupportedLocales, getDictionary } from "../[lang]/dictionaries";
-
+import { cn } from "@/lib/utils";
 interface IProps {
   lang: SupportedLocales;
+  className?: string;
 }
 
-export default async function Contact({ lang }: IProps) {
+export default async function Contact({ lang, className }: IProps) {
   const dict = await getDictionary(lang);
 
   return (
-    <div className="flex gap-4 w-full justify-center items-center flex-col">
+    <div
+      className={cn(
+        "flex gap-4 w-full justify-center items-center flex-col",
+        className
+      )}
+    >
       <h2 className="underline font-chango text-3xl">Contact</h2>
 
       <div className="flex gap-4 w-full justify-center flex-col md:flex-row">

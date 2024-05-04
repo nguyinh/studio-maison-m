@@ -3,6 +3,9 @@ import { SupportedLocales, getDictionary } from "../dictionaries";
 import Contact from "@/app/(components)/Contact";
 
 import computer from "@/images/computer.svg";
+import arrow from "@/images/arrow.svg";
+import mousePath from "@/images/mouse-path.svg";
+import mobileMousePath from "@/images/mobile-mouse-path.svg";
 
 interface PageParams {
   params: { lang: SupportedLocales };
@@ -14,13 +17,13 @@ export default async function RemoteRecording({
   const dict = await getDictionary(lang);
 
   return (
-    <div className="bg-background-remote-recording-1 flex flex-col items-center *:px-4 md:*:px-20">
-      <section className="w-full flex flex-col items-center justify-center relative md:py-14 pt-14">
+    <div className="bg-background-remote-recording-1 flex flex-col items-center *:px-4 md:*:px-0">
+      <section className="w-full flex flex-col md:flex-row items-center relative md:py-14 pt-14 md:*:basis-1/3 z-20">
         <Image
           priority
           src={computer}
           alt="Computer illustration"
-          className="hidden md:block absolute left-0 md:-bottom-2 -bottom-1 md:max-h-60 max-h-28 w-auto"
+          className="hidden md:block max-w-[33%] translate-y-16"
         />
 
         <div className="max-w-sm flex flex-col items-center justify-center gap-4">
@@ -52,8 +55,29 @@ export default async function RemoteRecording({
         />
       </section>
 
-      <section className="bg-background-remote-recording-2 w-full flex flex-col items-center justify-center gap-2 border-t-2 border-black pt-4">
-        <Contact lang={lang} />
+      <section className="bg-background-remote-recording-2 w-full flex flex-col items-center justify-center gap-2 border-t-2 border-black md:pt-20 pb-12 py-4 relative 10">
+        <Image
+          priority
+          src={mousePath}
+          alt="Mouse path"
+          className="hidden md:block absolute max-w-[80%]"
+        />
+
+        <Image
+          priority
+          src={mobileMousePath}
+          alt="Mouse path"
+          className="block md:hidden absolute w-full mr-8"
+        />
+
+        <Image
+          priority
+          src={arrow}
+          alt="Arrow illustration"
+          className="hidden md:block absolute w-1/12 bottom-36 animate-bounce"
+        />
+
+        <Contact lang={lang} className="z-10" />
       </section>
     </div>
   );
