@@ -8,6 +8,9 @@
     "remoteRecording": "Remote Recording",
     "about": "About"
   },
+  "footer": {
+    "socialMediaFollow": "Follow us for more"
+  },
   "contact": {
     "callUs": "Call us",
     "sendEmail": "Or send us an email"
