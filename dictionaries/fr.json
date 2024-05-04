@@ -25,7 +25,16 @@
     "description": "Here you can select some microphones or instruments you want to use for your session if you're curious about how they sound. Don't worry if you don't know I'll pick the right ones ;)"
   },
   "remoteRecording": {
-    "description": "Remote recording allows you to work with me without having to move from the comfort of your home (or from the bahamas). Just get straight in touch with me and tell me what you'd like for your project :D"
+    "title": "Remote recording",
+    "description1": "Remote recording",
+    "description2": "allows you to work with me",
+    "description3": "without having to move",
+    "description4": "from the comfort of your home (or from the bahamas). Just get straight in touch with me and tell me",
+    "description5": "what you'd like for your project :D",
+    "mobileDescription1": "Records from",
+    "mobileDescription2": " anywhere, anytime",
+    "mobileDescription3": " in",
+    "mobileDescription4": " studio quality"
   },
   "about": {
     "title": "About",
