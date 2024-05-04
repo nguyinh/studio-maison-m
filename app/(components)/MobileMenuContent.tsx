@@ -44,7 +44,7 @@ export default function MobileMenuContent({
       >
         {bookSession}
       </Link>
-      <Accordion
+      {/* <Accordion
         type="single"
         collapsible
         className="bg-background-gear-1 border-b-[1px] border-black"
@@ -60,7 +60,13 @@ export default function MobileMenuContent({
             <Link href="/gear">gear content TBD</Link>
           </AccordionContent>
         </AccordionItem>
-      </Accordion>
+      </Accordion> */}
+      <Link
+        href="/gear"
+        className="bg-background-gear-1 flex justify-start items-center border-b-[1px] border-black"
+      >
+        {gear}
+      </Link>
       <Link
         href="/remote-recording"
         className="bg-background-remote-recording-1 flex justify-start items-center border-b-[1px] border-black"

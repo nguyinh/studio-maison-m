@@ -25,7 +25,13 @@
     "answer3": "Is this only a recording studio ?"
   },
   "gear": {
-    "description": "Here you can select some microphones or instruments you want to use for your session if you're curious about how they sound. Don't worry if you don't know I'll pick the right ones ;)"
+    "title": "Gear",
+    "description": "Here you can select some microphones or instruments you want to use for your session if you're curious about how they sound. Don't worry if you don't know I'll pick the right ones ;)",
+    "microphones": "Microphones",
+    "snareDrums": "Snare drums",
+    "cymbales": "Cymbales",
+    "instruments": "Instruments",
+    "others": "Others"
   },
   "remoteRecording": {
     "title": "Remote recording",

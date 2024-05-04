@@ -5,6 +5,7 @@ const config = {
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
+    "./app/(components)/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
   ],
@@ -66,6 +67,7 @@ const config = {
         "background-gear-4": "#B2A5FF",
         "background-gear-5": "#CDA5FF",
         "background-gear-6": "#E2A5FF",
+        "background-gear-divider": "#5E6B98",
         "text-gear-1": "#000000",
         "text-gear-2": "#5775AE",
         "text-gear-3": "#6C79C1",
@@ -106,6 +108,7 @@ const config = {
       },
       dropShadow: {
         button: "0 3px 0 black",
+        "gear-title": "0 3px 0 black",
       },
     },
   },
