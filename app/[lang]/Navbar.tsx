@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { SupportedLocales, getDictionary } from "./dictionaries";
 import logo from "@/images/logo.svg";
-import burgerMenu from "@/images/burger-menu.svg";
 import LanguageToggle from "@/components/LanguageToggle";
 import MobileMenuContent from "../(components)/MobileMenuContent";
 import MenuBurger from "../(components)/MenuBurger";

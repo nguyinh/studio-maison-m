@@ -7,6 +7,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Contact from "@/app/(components)/Contact";
 
 interface PageParams {
   params: { lang: SupportedLocales };
@@ -35,14 +36,7 @@ export default async function About({
 
       <p className="font-grotesk font-medium">{dict.about.description}</p>
 
-      <div className="flex gap-4 w-full justify-center flex-col md:flex-row">
-        <button className="bg-[#75D6FF] text-xl font-grotesk font-extrabold border-solid border-2 border-black rounded-full px-8 py-2 drop-shadow-button">
-          {dict.contact.callUs}
-        </button>
-        <button className="bg-[#479BFF] text-xl font-grotesk font-extrabold border-solid border-2 border-black rounded-full px-8 py-2 drop-shadow-button">
-          {dict.contact.sendEmail}
-        </button>
-      </div>
+      <Contact lang={lang} hideTitle />
 
       <section className="bg-background-about-2 border-t-2 border-black flex flex-col gap-4 pt-4">
         <div className="flex justify-center">
