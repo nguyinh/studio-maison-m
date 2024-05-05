@@ -34,10 +34,10 @@ export default async function Navbar({ lang }: IProps) {
         </div>
 
         <div className="hidden sm:flex flex-row gap-14 justify-center font-grotesk font-extrabold items-center">
-          <Link href="/booking">Book a session</Link>
-          <Link href="/gear">Gear</Link>
-          <Link href="/remote-recording">Remote Recording</Link>
-          <Link href="/about">About</Link>
+          <Link href="/booking">{dict.navbar.booking}</Link>
+          <Link href="/gear">{dict.navbar.gear}</Link>
+          <Link href="/remote-recording">{dict.navbar.remoteRecording}</Link>
+          <Link href="/about">{dict.navbar.about}</Link>
           <LanguageToggle currentLocale={lang} />
         </div>
       </nav>

@@ -9,7 +9,42 @@
     "about": "About"
   },
   "footer": {
-    "socialMediaFollow": "Follow us for more"
+    "socialMediaFollow": "Home Everywhere Else"
+  },
+  "booking": {
+    "title": "Book a session",
+    "description": "Booking a session works in morning or afternoons, because I don't care if it takes 3 minutes or 3 hours, you won't leave until you're happy with the results!",
+    "mobileDescription": "Book my session at Studio Maison M",
+    "morning": "AM",
+    "afternoon": "PM",
+    "day": "Day",
+    "time": "Time",
+    "finish": "Finish !",
+    "instructions": {
+      "day": "First of all choose your day",
+      "hour": "Morning or afternoon?",
+      "gear": "What are we recording?",
+      "contact": "Where can we contact you?"
+    },
+    "hourStep": {
+      "instruction": "Select the schedule that suits you best",
+      "morningBookingType": "Early bird",
+      "afternoonBookingType": "I don't do mornings"
+    },
+    "contactStep": {
+      "title": "One last thing...",
+      "instruction": "We need your e-mail to complete your booking",
+      "button": "Book the best session ever!"
+    },
+    "bookingCompleteStep": {
+      "message": "Be ready !",
+      "title": "One last thing...",
+      "instruction": "You will receive a confirmation email from us in a few days to confirm your booking. Don't miss it !",
+      "location": {
+        "name": "Studio Maison M",
+        "address": "9 Allée de l'égalité 93140 Bondy"
+      }
+    }
   },
   "contact": {
     "callUs": "Call us",
@@ -17,16 +52,16 @@
   },
   "faq": {
     "title": "FAQ",
-    "question1": "I don't know what my project needs, can I still book a session ?",
-    "answer1": "Yes absolutely ! After completing the forms in the \"Book A Session\" tab you'll get an email where we can have a chat to figure out what you want out of the session and go from there !",
-    "question2": "Can we record a whole band at the same time ?",
-    "answer2": "Can we record a whole band at the same time ?",
-    "question3": "Is this only a recording studio ?",
-    "answer3": "Is this only a recording studio ?"
+    "question1": "I don't know what my project needs, can I still book a session?",
+    "answer1": "Yes absolutely! After completing the forms in the \"Book A Session\" tab you'll get an email where we can have a chat to figure out what you want out of the session and go from ther!",
+    "question2": "Can we record a whole band at the same time?",
+    "answer2": "Yes you can! The studio is equipped with drums, piano and guitar amps, so you'll be able to record everything at once if you want!",
+    "question3": "Is this only a recording studio?",
+    "answer3": "Nope. It can be used as a rehearsal space for future live shows, as a mixing/arrangement studio or to shoot some video clips for media content if you wish (I recommend the couch for podcasts!!)"
   },
   "gear": {
     "title": "Gear",
-    "description": "Here you can select some microphones or instruments you want to use for your session if you're curious about how they sound. Don't worry if you don't know I'll pick the right ones ;)",
+    "description": "Here you can select some microphones or instruments you want to use for your session or if you're curious about how they sound. Don't worry if you don't know I'll pick the right ones ;)",
     "microphones": "Microphones",
     "snareDrums": "Snare drums",
     "cymbales": "Cymbales",
@@ -47,6 +82,6 @@
   },
   "about": {
     "title": "About",
-    "description": "Studio Maison M was founded by non-other than the drummer Sami ROGER in 2021. After 2 years of work and testing, it opened in 2023. It is located in Bondy, close enough to Paris to be accessible but still far enough to be able to make band practice or loudv music playing possible at all times. Its constant evolution and new recording gears and instruments make it the perfect place to experiment and let your ideas flow without boundaries. Get ready to find weird instruments and stuff you won't find in an ordinary recording studio. You'll feel instantly home and cosy in this well decorated studio, the home you wish you could be in forever!"
+    "description": "Studio Maison M was founded by non-other than the drummer Sami ROGER in 2021. After 2 years of work and testing, it opened in 2023. It is located in Bondy, close enough to Paris to be accessible but still far enough to be able to make band practice or loud music playing possible at all times. Its constant evolution and new recording gears and instruments make it the perfect place to experiment and let your ideas flow without boundaries. Get ready to find weird instruments and stuff you won't find in an ordinary recording studio. You'll feel instantly home and cosy in this well decorated studio, the home you wish you could be in forever!"
   }
 }

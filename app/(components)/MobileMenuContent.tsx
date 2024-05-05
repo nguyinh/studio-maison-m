@@ -40,7 +40,7 @@ export default function MobileMenuContent({
     >
       <Link
         href="/booking"
-        className="bg-booking flex justify-start items-center border-b-[1px] border-black"
+        className="bg-background-booking flex justify-start items-center border-b-[1px] border-black"
       >
         {bookSession}
       </Link>

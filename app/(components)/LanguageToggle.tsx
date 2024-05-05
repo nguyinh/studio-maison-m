@@ -17,7 +17,6 @@ export default function LanguageToggle({
 
   const switchTo = (newLocale: SupportedLocales) => {
     const [_, currentLocale, ...rest] = pathname.split("/");
-    console.log(`/${newLocale}/${rest.join("/")}`);
     router.push(`/${newLocale}/${rest.join("/")}`);
   };
 

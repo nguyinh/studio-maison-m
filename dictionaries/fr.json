@@ -1,52 +1,87 @@
 {
   "studio": {
-    "studioSounds": "Sons du studio"
+    "studioSounds": "Les Sons du Studio"
   },
   "navbar": {
-    "booking": "Réserver une session",
-    "gear": "Equipement",
-    "remoteRecording": "Remote Recording",
-    "about": "A propos"
+    "booking": "Réserver une Session",
+    "gear": "Matos",
+    "remoteRecording": "Session à Distance",
+    "about": "A Propos"
   },
   "footer": {
-    "socialMediaFollow": "Follow us for more"
+    "socialMediaFollow": "La Maison partout ailleurs"
+  },
+  "booking": {
+    "title": "Réserver une session",
+    "description": "Vous pouvez réserver un créneau le matin ou l'après-midi, parce que peu importe si cela prends 3 minutes ou 3 heures, vous ne repartirez pas tant que vous n'etes pas satisfait du résultat !",
+    "mobileDescription": "",
+    "morning": "",
+    "afternoon": "",
+    "day": "",
+    "time": "",
+    "finish": "",
+    "instructions": {
+      "day": "Choisissez votre jour",
+      "hour": "Matin ou Après-midi ?",
+      "gear": "Qu'est-ce qu'on enregistre ?",
+      "contact": "Votre e-mail pour vous contacter ?"
+    },
+    "hourStep": {
+      "instruction": "",
+      "morningBookingType": "Le monde m'appartient",
+      "afternoonBookingType": "Je suis pas du matin"
+    },
+    "contactStep": {
+      "title": "Une dernière chose...",
+      "instruction": "Nous avons besoin de votre e-mail pour complèter la reservation",
+      "button": "Réserver la meilleure session au monde !"
+    },
+    "bookingCompleteStep": {
+      "message": "Soyez prêts",
+      "title": "Une dernière chose...",
+      "instruction": "Vous allez recevoir un e-mail de confirmation dans quelques jours pour confirmer votre réservation. Ne le rater pas !",
+      "location": {
+        "name": "Studio Maison M",
+        "address": "9 Allée de l'égalité 93140 Bondy"
+      }
+    }
   },
   "contact": {
-    "callUs": "Nous appeler",
-    "sendEmail": "Ou envoyer un email"
+    "callUs": "Appelez nous",
+    "sendEmail": "Ou envoyez nous un mail"
   },
   "faq": {
     "title": "FAQ",
-    "question1": "I don't know what my project needs, can I still book a session ?",
-    "answer1": "I don't know what my project needs, can I still book a session ?",
-    "question2": "Can we record a whole band at the same time ?",
-    "answer2": "Can we record a whole band at the same time ?",
-    "question3": "Is this only a recording studio ?",
-    "answer3": "Is this only a recording studio ?"
+    "question1": "Je ne sais pas ce dont mon projet a besoin, je peux quand même réserver une  session ?",
+    "answer1": "Oui bien sûr ! Après avoir rempli le formulaire dans la rubrique \"Réserver une Session\" vous recevrez un mail et nous pourrons discuter pour voir ce aque vous attendez de la session et partir de là !",
+    "question2": "Est-ce qu'on peut enregistrer tout un groupe à la fois ?",
+    "answer2": "Oui c'est possible ! Le studio est équippé de batteries, piano et ampli de guitare donc vous pourrez tout enregistrer en même temps si vous voulez !",
+    "question3": "Est-ce seulement un studio d'enregistrement ?",
+    "answer3": "Nope. Il peut être utilisé pour des répétitions en vu de prochains concerts,pour du mix/arrangement ou pour filmer des vidéos pour les réseaux si vous le souhaiter ! (Je recommande le canapé pour les podcasts !!!)"
   },
   "gear": {
-    "title": "Gear",
-    "description": "Here you can select some microphones or instruments you want to use for your session if you're curious about how they sound. Don't worry if you don't know I'll pick the right ones ;)",
-    "microphones": "Microphones",
-    "snareDrums": "Snare drums",
+    "title": "Matos",
+    "description": "Ici vous pouvez choisir les micros/instruments que vous souhaitez utiliser pour votre session ou si vous êtes curieux. Si vous ne savez pas ne vous inquiètez pas je choisirai les bons ;)",
+    "microphones": "Micros",
+    "snareDrums": "Caisses claires",
     "cymbales": "Cymbales",
     "instruments": "Instruments",
-    "others": "Others"
+    "others": "Autres"
   },
   "remoteRecording": {
-    "title": "Remote recording",
-    "description1": "Remote recording",
-    "description2": "allows you to work with me",
-    "description3": "without having to move",
-    "description4": "from the comfort of your home (or from the bahamas). Just get straight in touch with me and tell me",
-    "description5": "what you'd like for your project :D",
-    "mobileDescription1": "Records from",
-    "mobileDescription2": " anywhere, anytime",
-    "mobileDescription3": " in",
-    "mobileDescription4": " studio quality"
+    "title": "Session à distances",
+    "description1": "Les Sessions a distances",
+    "description2": " vous permettent de travailler avec moi",
+    "description3": " sans partir de chez vous (ou des Bahamas)",
+    "description4": " Vous avez juste à m'envoyer un mail et à me dire",
+    "description5": "ce que vous aimeriez pour votre projet :D",
+    "mobileDescription1": "Enregistrez depuis",
+    "mobileDescription2": " N'importe où, n'importe quand",
+    "mobileDescription3": " en",
+    "mobileDescription4": " qualité studio"
   },
   "about": {
-    "title": "About",
-    "description": "Studio Maison M was founded by non-other than the drummer Sami ROGER in 2021. After 2 years of work and testing, it opened in 2023. It is located in Bondy, close enough to Paris to be accessible but still far enough to be able to make band practice or loudv music playing possible at all times. Its constant evolution and new recording gears and instruments make it the perfect place to experiment and let your ideas flow without boundaries. Get ready to find weird instruments and stuff you won't find in an ordinary recording studio. You'll feel instantly home and cosy in this well decorated studio, the home you wish you could be in forever!"
+    "title": "A propos",
+    "description": "Le Studio Maison M a été fondé par nul-autre que le batteur Sami ROGER en 2021. Après 2 ans de travaux et de tests, il a ouvert ses portes en 2023. Il se situe à Bondy, proche de Paris pour être accessible mais suffisemment loin pour pouvoir faire de le musique à toute heure ! Son évolution constante et nouveaux micros et instruments en font l'endroit parfait pour laisser parler vos idées sans contraintes. Préparez vous à trouver des instruments bizarres et autres babiolles que vous ne trouveriez pas dans un studio ordinaire. Vous vous sentirez instantanément comme à la maison dans ce studio bien aménager et décoré: La Maison dans laquelle vous aimeriez rester à jamais !"
   }
 }

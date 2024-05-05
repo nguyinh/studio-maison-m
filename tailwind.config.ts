@@ -56,7 +56,7 @@ const config = {
 
         // Custom
         "main-background": "#FFFAEC",
-        booking: "#FFCECE",
+        "background-booking": "#FFCECE",
         "background-remote-recording-1": "#C9EFFF",
         "background-remote-recording-2": "#B8DAE8",
         "background-about-1": "#CDFFC9",
