@@ -5,7 +5,7 @@ import invertedLogo from "@/images/inverted-logo.svg";
 import spotifyLogo from "@/images/spotify-logo.svg";
 import instagramLogo from "@/images/instagram-logo.svg";
 import tiktokLogo from "@/images/tiktok-logo.svg";
-import youtubeLogo from "@/images/youtube-logo.svg";
+// import youtubeLogo from "@/images/youtube-logo.svg";
 
 interface IProps {
   lang: SupportedLocales;
@@ -45,7 +45,7 @@ export default async function Footer({ lang }: IProps) {
 
         <div className="flex flex-row gap-8">
           <Link
-            href="https://spotify.com"
+            href="https://open.spotify.com/user/31g75cb3dssp5rb2l6jgabk2agse"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -58,7 +58,7 @@ export default async function Footer({ lang }: IProps) {
           </Link>
 
           <Link
-            href="https://instagram.com"
+            href="https://www.instagram.com/studiomaisonm"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -71,7 +71,7 @@ export default async function Footer({ lang }: IProps) {
           </Link>
 
           <Link
-            href="https://tiktok.com"
+            href="https://www.tiktok.com/@studiomaisonm"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -83,7 +83,7 @@ export default async function Footer({ lang }: IProps) {
             />
           </Link>
 
-          <Link
+          {/* <Link
             href="https://youtube.com"
             target="_blank"
             rel="noopener noreferrer"
@@ -94,7 +94,7 @@ export default async function Footer({ lang }: IProps) {
               alt="Youtube logo"
               className="w-lg"
             />
-          </Link>
+          </Link> */}
         </div>
       </div>
     </section>
