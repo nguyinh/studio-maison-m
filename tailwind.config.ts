@@ -56,6 +56,10 @@ const config = {
 
         // Custom
         "main-background": "#FFFAEC",
+        "background-studio": "#FFFAEC",
+        "background-studio-sounds": "#FFF2E5",
+        "background-instagram": "#F2B353",
+        "background-spotify": "#7BD165",
         "background-booking": "#FFCECE",
         "background-remote-recording-1": "#C9EFFF",
         "background-remote-recording-2": "#B8DAE8",
@@ -109,6 +113,7 @@ const config = {
       dropShadow: {
         button: "0 3px 0 black",
         "gear-title": "0 3px 0 black",
+        "studio-sound-title": "3px 3px 0 black",
       },
     },
   },

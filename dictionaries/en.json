@@ -1,7 +1,4 @@
 {
-  "studio": {
-    "studioSounds": "Sounds of the studio"
-  },
   "navbar": {
     "booking": "Book a session",
     "gear": "Gear",
@@ -10,6 +7,30 @@
   },
   "footer": {
     "socialMediaFollow": "Home Everywhere Else"
+  },
+  "studio": {
+    "studioSounds": "Sounds of the studio",
+    "soundExample": "Example groove :",
+    "vintageTight": {
+      "title": "Vintage Tight",
+      "sounds": ["Precise", "Beefy", "Organic", "Versatile"]
+    },
+    "classicRock": {
+      "title": "Classic Rock",
+      "sounds": ["Loud & powerful", "Lots of attacks & punch", "Open"]
+    },
+    "modernTones": {
+      "title": "Modern Tones",
+      "sounds": [
+        "Clean & Controlled",
+        "Sound you want when you beat box",
+        "Versatile"
+      ]
+    },
+    "jazzyVibes": {
+      "title": "Jazzy Vibes",
+      "sounds": ["Ope & Ringy", "Sustain", "Melodic"]
+    }
   },
   "booking": {
     "title": "Book a session",

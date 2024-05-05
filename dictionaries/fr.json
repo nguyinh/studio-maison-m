@@ -1,7 +1,4 @@
 {
-  "studio": {
-    "studioSounds": "Les Sons du Studio"
-  },
   "navbar": {
     "booking": "Réserver une Session",
     "gear": "Matos",
@@ -10,6 +7,30 @@
   },
   "footer": {
     "socialMediaFollow": "La Maison partout ailleurs"
+  },
+  "studio": {
+    "studioSounds": "Les Sons du Studio",
+    "soundExample": "",
+    "vintageTight": {
+      "title": "Vintage Tight",
+      "sounds": ["Precise", "Beefy", "Organic", "Versatile"]
+    },
+    "classicRock": {
+      "title": "Classic Rock",
+      "sounds": ["Loud & powerful", "Lots of attacks & punch", "Open"]
+    },
+    "modernTones": {
+      "title": "Modern Tones",
+      "sounds": [
+        "Clean & Controlled",
+        "Sound you want when you beat box",
+        "Versatile"
+      ]
+    },
+    "jazzyVibes": {
+      "title": "Jazzy Vibes",
+      "sounds": ["Ope & Ringy", "Sustain", "Melodic"]
+    }
   },
   "booking": {
     "title": "Réserver une session",

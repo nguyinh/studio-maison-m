@@ -1,8 +1,12 @@
 import type { StaticImageData } from "next/image";
-import u47Fet from "@/images/gear/u47-fet.png";
-import neumannTlm102 from "@/images/gear/neumann-tlm102.png";
-import sennheiserMd421 from "@/images/gear/sennheiser-md421-II.png";
-import beyerdynamicsM88 from "@/images/gear/beyerdynamics-m88.png";
+import u47Fet from "@/images/gear/microphones/u47-fet.jpg";
+import neumannTlm102 from "@/images/gear/microphones/neumann-tlm102.jpg";
+import sennheiserMd421 from "@/images/gear/microphones/sennheiser-md421-II.jpg";
+import beyerdynamicsM88 from "@/images/gear/microphones/beyerdynamics-m88.jpg";
+import audioTechnica from "@/images/gear/microphones/audio-technica-atm-450.jpg";
+import shureBeta91a from "@/images/gear/microphones/shure-beta-91a.jpg";
+import shureBeta52a from "@/images/gear/microphones/shure-beta-52a.jpg";
+import shureSm57 from "@/images/gear/microphones/shure-sm-57.jpg";
 
 export type GearElement = {
   name: string;
@@ -30,6 +34,26 @@ export const microphones: GearElement[] = [
   {
     name: "Beyerdynamics M88 (x2)",
     image: beyerdynamicsM88,
+    titleBackgroundColor: "#C3D8FF",
+  },
+  {
+    name: "Audio Technica ATM 450",
+    image: audioTechnica,
+    titleBackgroundColor: "#C3D8FF",
+  },
+  {
+    name: "Shure Beta 91A",
+    image: shureBeta91a,
+    titleBackgroundColor: "#C3D8FF",
+  },
+  {
+    name: "Shure Beta 52A",
+    image: shureBeta52a,
+    titleBackgroundColor: "#C3D8FF",
+  },
+  {
+    name: "Shure SM57",
+    image: shureSm57,
     titleBackgroundColor: "#C3D8FF",
   },
 ];
