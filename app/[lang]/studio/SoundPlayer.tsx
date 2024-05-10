@@ -15,10 +15,10 @@ export default function SoundPlayer({ backgroundColor }: IProps) {
   const playerRef = useRef<HTMLDivElement>(null);
 
   const currentWidth = playerRef.current?.getBoundingClientRect().width ?? 0;
-  const barNumber = Math.round(currentWidth / 6);
-  console.log(barNumber);
 
   const bars = useMemo(() => {
+    const barNumber = Math.round(currentWidth / 8);
+
     return Array.from(Array(barNumber).keys()).map((bar, index) => (
       <div
         className="w-[2px] rounded-full bg-black"
@@ -26,9 +26,7 @@ export default function SoundPlayer({ backgroundColor }: IProps) {
         key={index}
       />
     ));
-  }, [barNumber]);
-
-  console.log(bars);
+  }, [currentWidth]);
 
   const toggleSound = () => {
     if (isPlaying) {
@@ -40,7 +38,7 @@ export default function SoundPlayer({ backgroundColor }: IProps) {
 
   return (
     <div
-      className="rounded-full p-2 drop-shadow-studio-sound-title border-2 border-black flex flex-row"
+      className="rounded-full p-2 drop-shadow-studio-sound-title border-2 border-black flex flex-row md:w-full w-fit"
       style={{
         backgroundColor,
       }}
@@ -65,7 +63,7 @@ export default function SoundPlayer({ backgroundColor }: IProps) {
 
       <div
         ref={playerRef}
-        className="w-full flex flex-row items-center justify-evenly px-2"
+        className="md:w-full hidden md:flex flex-row items-center justify-between px-2 w-full"
       >
         {bars}
       </div>

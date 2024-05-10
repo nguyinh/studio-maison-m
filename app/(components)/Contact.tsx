@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { SupportedLocales, getDictionary } from "../[lang]/dictionaries";
 import { cn } from "@/lib/utils";
 interface IProps {
@@ -22,21 +21,16 @@ export default async function Contact({ lang, className, hideTitle }: IProps) {
       )}
 
       <div className="flex gap-4 w-full justify-center items-center flex-col md:flex-row">
-        <Link
-          href="tel:+33628624256"
-          className="bg-[#75D6FF] text-xl text-center font-grotesk font-extrabold border-solid border-2 border-black rounded-full px-8 py-2 drop-shadow-button hover:drop-shadow-none hover:translate-y-1 md:w-auto w-full"
-          as={"button"}
-        >
-          {dict.contact.callUs}
-        </Link>
-
-        <Link
-          href="mailto:studiomaisonm@gmail.com"
-          className="bg-[#479BFF] text-xl text-center font-grotesk font-extrabold border-solid border-2 border-black rounded-full px-8 py-2 drop-shadow-button hover:drop-shadow-none hover:translate-y-1 md:w-auto w-full"
-          as={"button"}
-        >
-          {dict.contact.sendEmail}
-        </Link>
+        <a href="tel:+33628624256" className="md:w-auto w-full">
+          <button className="bg-[#75D6FF] text-xl text-center font-grotesk font-extrabold border-solid border-2 border-black rounded-full px-8 py-2 drop-shadow-button hover:brightness-95 active:drop-shadow-none active:translate-y-1 w-full">
+            {dict.contact.callUs}
+          </button>
+        </a>
+        <a href="mailto:studiomaisonm@gmail.com" className="md:w-auto w-full">
+          <button className="bg-[#479BFF] text-xl text-center font-grotesk font-extrabold border-solid border-2 border-black rounded-full px-8 py-2 drop-shadow-button hover:brightness-95 active:drop-shadow-none active:translate-y-1 w-full">
+            {dict.contact.sendEmail}
+          </button>
+        </a>
       </div>
     </div>
   );

@@ -17,7 +17,7 @@ export default async function RemoteRecording({
   const dict = await getDictionary(lang);
 
   return (
-    <div className="bg-background-remote-recording-1 flex flex-col items-center *:px-4 md:*:px-0">
+    <div className="bg-background-remote-recording-1 flex flex-col items-center overflow-hidden *:px-4 md:*:px-0">
       <section className="w-full flex flex-col md:flex-row items-center relative md:py-14 pt-14 md:*:basis-1/3 z-20">
         <Image
           priority

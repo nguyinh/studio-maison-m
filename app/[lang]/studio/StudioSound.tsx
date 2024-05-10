@@ -20,12 +20,12 @@ export default async function StudioSound({
   const dict = await getDictionary(lang);
 
   return (
-    <div className="bg-white border-black border-2 relative flex flex-row ml-4 mt-8">
-      <div className="relative">
+    <div className="bg-white border-black border-2 relative flex flex-row ml-4 mt-8 w-1/2">
+      <div className="relative lg:min-w-56">
         <Image
           src={illustrationSrc}
           alt="Vintage tight sounds illutration"
-          className="border-black border-2 -translate-x-4 -translate-y-4"
+          className="border-black border-2 -translate-x-4 -translate-y-4 sm:min-w-56"
           width={500}
         />
 
@@ -37,7 +37,7 @@ export default async function StudioSound({
         </div>
       </div>
 
-      <div className="basis-1/3 min-w-64 py-8 pl-2 pr-4 flex flex-col font-extrabold">
+      <div className="py-8 pl-2 pr-4 flex flex-col md:items-stretch items-center font-extrabold gap-4 w-full">
         <ul className="list-disc">
           {sounds.map((sound) => (
             <li key={sound} className="ml-5">
@@ -47,7 +47,7 @@ export default async function StudioSound({
         </ul>
 
         <div className="mt-auto flex flex-col gap-2">
-          <p>{dict.studio.soundExample}</p>
+          <p className="hidden md:block">{dict.studio.soundExample}</p>
 
           <SoundPlayer backgroundColor={color} />
         </div>
