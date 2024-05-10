@@ -31,8 +31,16 @@ export default function BookingInput({ lang, dict }: IProps) {
     setContact(event.target.value ?? null);
   };
 
-  const onContactSubmit = () => {
-    setStep("BOOKING_SUCCESS");
+  const onContactSubmit = async () => {
+    // TODO: test if email is valid
+    const response = await fetch("/emails", {
+      method: "POST",
+      body: JSON.stringify({ email: contact }),
+    });
+
+    console.log(response);
+
+    // setStep("BOOKING_SUCCESS");
   };
 
   const emailInputId = useId();
@@ -57,7 +65,7 @@ export default function BookingInput({ lang, dict }: IProps) {
 
           <div className="flex flex-row justify-center gap-4 h-full">
             <button
-              className="bg-[#EEF3F1] border-black border-2 rounded-md flex-1 drop-shadow-button hover:drop-shadow-none hover:translate-y-1"
+              className="bg-[#EEF3F1] border-black border-2 rounded-md flex-1 drop-shadow-button hover:brightness-95 active:drop-shadow-none active:translate-y-1"
               onClick={() => onHourSelection("MORNING")}
             >
               <p>{dict.booking.hourStep.morningBookingType}</p>
@@ -65,7 +73,7 @@ export default function BookingInput({ lang, dict }: IProps) {
             </button>
 
             <button
-              className="bg-[#EEF3F1] border-black border-2 rounded-md flex-1 drop-shadow-button hover:drop-shadow-none hover:translate-y-1"
+              className="bg-[#EEF3F1] border-black border-2 rounded-md flex-1 drop-shadow-button hover:brightness-95 active:drop-shadow-none active:translate-y-1"
               onClick={() => onHourSelection("AFTERNOON")}
             >
               <p>{dict.booking.hourStep.afternoonBookingType}</p>
@@ -97,7 +105,7 @@ export default function BookingInput({ lang, dict }: IProps) {
           </div>
 
           <button
-            className="bg-[#CFB2FF] disabled:bg-[#DCDCDC] disabled:drop-shadow-button disabled:translate-y-0 rounded-full border-black border-2 drop-shadow-button hover:drop-shadow-none hover:translate-y-1 px-4 py-2 mt-auto"
+            className="bg-[#CFB2FF] disabled:bg-[#DCDCDC] disabled:drop-shadow-button disabled:translate-y-0 rounded-full border-black border-2 drop-shadow-button hover:brightness-95 active:drop-shadow-none active:translate-y-1 px-4 py-2 mt-auto"
             onClick={onContactSubmit}
             disabled={!contact}
           >

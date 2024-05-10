@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbo",
+    "dev:noturbo": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -21,10 +22,13 @@
     "react-calendar": "^5.0.0",
     "react-confetti": "^6.1.0",
     "react-dom": "^18",
+    "resend": "^3.2.0",
     "sharp": "^0.33.3",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
-    "use-sound": "^3.0.0"
+    "use-sound": "^3.0.0",
+    "@react-email/components": "0.0.17",
+    "react-email": "2.1.2"
   },
   "devDependencies": {
     "@types/negotiator": "^0.6.3",
