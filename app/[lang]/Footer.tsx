@@ -5,6 +5,7 @@ import invertedLogo from "@/images/inverted-logo.svg";
 import spotifyLogo from "@/images/spotify-logo.svg";
 import instagramLogo from "@/images/instagram-logo.svg";
 import tiktokLogo from "@/images/tiktok-logo.svg";
+import LanguageToggle from "../(components)/LanguageToggle";
 // import youtubeLogo from "@/images/youtube-logo.svg";
 
 interface IProps {
@@ -16,12 +17,18 @@ export default async function Footer({ lang }: IProps) {
 
   return (
     <section className="bg-black flex flex-col gap-8 py-8 pb-16 px-4 md:px-16 z-10 relative text-white">
-      <Image
-        priority
-        src={invertedLogo}
-        alt="Studio Maison M logo"
-        className="max-w-3xl"
-      />
+      <div className="flex flex-row items-center justify-between">
+        <Link href="/studio">
+          <Image
+            priority
+            src={invertedLogo}
+            alt="Studio Maison M logo"
+            className="max-w-3xl"
+          />
+        </Link>
+
+        <LanguageToggle currentLocale={lang} className="block sm:hidden" />
+      </div>
 
       <div className="border-t-2 border-white w-full" />
 

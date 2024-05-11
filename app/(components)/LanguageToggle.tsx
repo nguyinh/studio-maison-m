@@ -9,8 +9,10 @@ import { SupportedLocales } from "../[lang]/dictionaries";
 
 export default function LanguageToggle({
   currentLocale,
+  className,
 }: {
   currentLocale: SupportedLocales;
+  className?: string;
 }) {
   const router = useRouter();
   const pathname = usePathname();
@@ -24,6 +26,7 @@ export default function LanguageToggle({
     <Image
       src={toggleFr}
       alt="Switch to english"
+      className={className}
       onClick={() => {
         switchTo("en");
       }}
@@ -32,6 +35,7 @@ export default function LanguageToggle({
     <Image
       src={toggleEn}
       alt="Switch to french"
+      className={className}
       onClick={() => {
         switchTo("fr");
       }}

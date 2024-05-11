@@ -40,7 +40,9 @@ export default async function About({
 
         <div className="max-w-xl flex flex-col items-center gap-2 z-10 px-16 md:px-8">
           <h2 className="font-chango text-5xl">{dict.gear.title}</h2>
-          <p className="font-grotesk font-bold">{dict.gear.description}</p>
+          <p className="font-grotesk font-bold text-justify">
+            {dict.gear.description}
+          </p>
         </div>
       </section>
 

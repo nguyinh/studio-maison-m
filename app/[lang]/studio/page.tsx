@@ -28,7 +28,7 @@ export default async function Studio({
           {dict.studio.studioSounds}
         </h2>
 
-        <div className="flex flex-row flex-wrap lg:*:basis-[45%] *:basis-[100%] gap-4 justify-between font-grotesk font-bold">
+        <div className="flex flex-row flex-wrap lg:*:basis-[30%] *:basis-[100%] gap-4 justify-between font-grotesk font-bold">
           <StudioSound
             illustrationSrc={deepCrunchy}
             mix="deepCrunchy"

@@ -156,7 +156,7 @@ export const cymbales: GearElement[] = [
     titleBackgroundColor: "#C6BDFF",
   },
   {
-    name: "AAX Studio hats",
+    name: '14" AAX Studio hats',
     image: aaxStudioHats,
     titleBackgroundColor: "#C6BDFF",
   },
@@ -176,7 +176,7 @@ export const cymbales: GearElement[] = [
     titleBackgroundColor: "#C6BDFF",
   },
   {
-    name: "AAX Studio Ride",
+    name: '20" AAX Studio Ride',
     image: aaxStudioRide,
     titleBackgroundColor: "#C6BDFF",
   },
