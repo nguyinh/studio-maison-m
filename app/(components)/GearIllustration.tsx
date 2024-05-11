@@ -19,7 +19,8 @@ export default function GearIllustration({
         alt={name}
         width={300}
         height={300}
-        className="min-h-60 min-w-60"
+        className="min-h-60 min-w-60 max-h-60 max-w-60 object-cover"
+        objectFit="cover"
       />
 
       <h4

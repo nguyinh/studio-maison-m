@@ -23,11 +23,9 @@ export default async function About({
 }: Readonly<PageParams>) {
   const dict = await getDictionary(lang);
 
-  // TODO: integrate gear elements images
-
   return (
     <div className="bg-background-gear-1 flex flex-col items-center">
-      <section className="flex flex-col items-center w-full py-8 relative">
+      <section className="flex flex-col items-center w-full py-8 relative overflow-hidden">
         <Image
           src={guitar}
           alt="Guitar illustration"
