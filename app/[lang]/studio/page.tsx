@@ -6,6 +6,7 @@ import jazzyVibes from "@/images/studio-sounds/jazzy-vibes-sounds.jpeg";
 import StudioSound from "./StudioSound";
 import Contact from "@/app/(components)/Contact";
 import FAQ from "@/app/(components)/FAQ";
+import StudioVideo from "./StudioVideo";
 
 interface PageParams {
   params: { lang: SupportedLocales };
@@ -18,8 +19,8 @@ export default async function Studio({
 
   return (
     <div className="bg-background-studio md:*:px-16 *:px-4">
-      <section className="bg-background-studio h-[80dvh] flex flex-col justify-center items-center font-chango md:px-0">
-        Askip yaura une vidéo ici
+      <section className="bg-background-studio flex flex-col justify-center items-center font-chango !md:px-0 !px-0 md:h-[90dvh] h-[30dvh]">
+        <StudioVideo />
       </section>
 
       <section className="bg-background-studio-sounds flex flex-col items-center md:px-16 gap-8 py-8">
