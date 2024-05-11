@@ -36,7 +36,6 @@ export default async function Footer({ lang }: IProps) {
 
         <div className="flex flex-col basis-full">
           <Link href="/about">{dict.navbar.about}</Link>
-          <Link href="/privacy-policy">TBT</Link>
         </div>
       </nav>
 
