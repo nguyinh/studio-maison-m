@@ -6,35 +6,27 @@
     "about": "About"
   },
   "footer": {
-    "socialMediaFollow": "Home Everywhere Else"
+    "socialMediaFollow": "MaisonM Everywhere Else"
   },
   "studio": {
     "studioSounds": "Sounds of the studio",
-    "soundExample": "Example groove :",
-    "vintageTight": {
-      "title": "Vintage Tight",
-      "sounds": ["Precise", "Beefy", "Organic", "Versatile"]
+    "soundExample": "Example :",
+    "deepCrunchy": {
+      "title": "Deep&Crunchy",
+      "sounds": ["Deep", "Beefy", "Tight"]
     },
     "classicRock": {
-      "title": "Classic Rock",
-      "sounds": ["Loud & powerful", "Lots of attacks & punch", "Open"]
+      "title": "Punchy Rock",
+      "sounds": ["Loud", "Powerful", "Lots of attack & punch"]
     },
-    "modernTones": {
-      "title": "Modern Tones",
-      "sounds": [
-        "Clean & Controlled",
-        "Sound you want when you beat box",
-        "Versatile"
-      ]
-    },
-    "jazzyVibes": {
-      "title": "Jazzy Vibes",
-      "sounds": ["Ope & Ringy", "Sustain", "Melodic"]
+    "vintageCrisp": {
+      "title": "Vintage Crisp",
+      "sounds": ["Old School"]
     }
   },
   "booking": {
     "title": "Book a session",
-    "description": "Booking a session works in morning or afternoons, because I don't care if it takes 3 minutes or 3 hours, you won't leave until you're happy with the results!",
+    "description": "Booking a session works in mornings or afternoons, because I don't care if it takes 3 minutes or 3 hours, you won't leave until you're happy with the results!",
     "mobileDescription": "Book my session at Studio Maison M",
     "morning": "AM",
     "afternoon": "PM",

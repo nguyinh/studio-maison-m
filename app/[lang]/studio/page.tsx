@@ -1,8 +1,8 @@
 import { SupportedLocales, getDictionary } from "../dictionaries";
 
-import vintageTight from "@/images/studio-sounds/vintage-tight-sounds.jpg";
+import deepCrunchy from "@/images/studio-sounds/deep-crunchy-sounds.jpg";
 import classicRock from "@/images/studio-sounds/classic-rock-sounds.jpeg";
-import jazzyVibes from "@/images/studio-sounds/jazzy-vibes-sounds.jpeg";
+import vintageCrisp from "@/images/studio-sounds/vintage-crisp-sounds.jpeg";
 import StudioSound from "./StudioSound";
 import Contact from "@/app/(components)/Contact";
 import FAQ from "@/app/(components)/FAQ";
@@ -30,9 +30,9 @@ export default async function Studio({
 
         <div className="flex flex-row flex-wrap lg:*:basis-[45%] *:basis-[100%] gap-4 justify-between font-grotesk font-bold">
           <StudioSound
-            illustrationSrc={vintageTight}
-            title={dict.studio.vintageTight.title}
-            sounds={dict.studio.vintageTight.sounds}
+            illustrationSrc={deepCrunchy}
+            title={dict.studio.deepCrunchy.title}
+            sounds={dict.studio.deepCrunchy.sounds}
             lang={lang}
             color="#D1A3FF"
           />
@@ -46,17 +46,9 @@ export default async function Studio({
           />
 
           <StudioSound
-            illustrationSrc={vintageTight}
-            title={dict.studio.modernTones.title}
-            sounds={dict.studio.modernTones.sounds}
-            lang={lang}
-            color="#B9C9FF"
-          />
-
-          <StudioSound
-            illustrationSrc={jazzyVibes}
-            title={dict.studio.jazzyVibes.title}
-            sounds={dict.studio.jazzyVibes.sounds}
+            illustrationSrc={vintageCrisp}
+            title={dict.studio.vintageCrisp.title}
+            sounds={dict.studio.vintageCrisp.sounds}
             lang={lang}
             color="#FFE872"
           />

@@ -10,37 +10,29 @@
   },
   "studio": {
     "studioSounds": "Les Sons du Studio",
-    "soundExample": "",
-    "vintageTight": {
-      "title": "Vintage Tight",
-      "sounds": ["Precise", "Beefy", "Organic", "Versatile"]
+    "soundExample": "Exemple :",
+    "deepCrunchy": {
+      "title": "Deep&Crunchy",
+      "sounds": ["Profond", "Précis", "Solide"]
     },
     "classicRock": {
-      "title": "Classic Rock",
-      "sounds": ["Loud & powerful", "Lots of attacks & punch", "Open"]
+      "title": "Punchy Rock",
+      "sounds": ["Fort", "Puissant", "Plein d'attaque"]
     },
-    "modernTones": {
-      "title": "Modern Tones",
-      "sounds": [
-        "Clean & Controlled",
-        "Sound you want when you beat box",
-        "Versatile"
-      ]
-    },
-    "jazzyVibes": {
-      "title": "Jazzy Vibes",
-      "sounds": ["Ope & Ringy", "Sustain", "Melodic"]
+    "vintageCrisp": {
+      "title": "Vintage Crisp",
+      "sounds": ["Old School"]
     }
   },
   "booking": {
     "title": "Réserver une session",
     "description": "Vous pouvez réserver un créneau le matin ou l'après-midi, parce que peu importe si cela prends 3 minutes ou 3 heures, vous ne repartirez pas tant que vous n'etes pas satisfait du résultat !",
-    "mobileDescription": "",
-    "morning": "",
-    "afternoon": "",
-    "day": "",
-    "time": "",
-    "finish": "",
+    "mobileDescription": "Réserver ma session à la MaisonM",
+    "morning": "AM",
+    "afternoon": "PM",
+    "day": "Jour",
+    "time": "Heure",
+    "finish": "Fini !",
     "instructions": {
       "day": "Choisissez votre jour",
       "hour": "Matin ou Après-midi ?",
