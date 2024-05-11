@@ -3,6 +3,11 @@ declare module "*.mp3" {
   export default content;
 }
 
+declare module "*.wav" {
+  const content: string;
+  export default content;
+}
+
 declare module "use-sound" {
   import { Howl, Howler } from "howler";
 

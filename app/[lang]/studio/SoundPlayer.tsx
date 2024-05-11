@@ -1,17 +1,19 @@
 "use client";
 
 import Image from "next/image";
-import useSound from "use-sound";
 import playButton from "@/images/play-button.svg";
 import pauseButton from "@/images/pause-button.svg";
-import { useMemo, useRef } from "react";
+import { useContext, useMemo, useRef } from "react";
+import { AudioContext } from "@/app/(contexts)/AudioProvider";
 
 interface IProps {
   backgroundColor: `#${string}`;
+  mix: "deepCrunchy" | "punchyRock" | "vintageCrisp";
 }
 
-export default function SoundPlayer({ backgroundColor }: IProps) {
-  const [play, { stop, isPlaying }] = useSound("/mp3/i-see-money.mp3");
+export default function SoundPlayer({ backgroundColor, mix }: IProps) {
+  const audioContext = useContext(AudioContext);
+
   const playerRef = useRef<HTMLDivElement>(null);
 
   const currentWidth = playerRef.current?.getBoundingClientRect().width ?? 0;
@@ -22,17 +24,17 @@ export default function SoundPlayer({ backgroundColor }: IProps) {
     return Array.from(Array(barNumber).keys()).map((bar, index) => (
       <div
         className="w-[2px] rounded-full bg-black"
-        style={{ height: `${Math.max(Math.random() * 100, 10)}%` }}
+        style={{ height: `${Math.max(Math.random() * 100, 20)}%` }}
         key={index}
       />
     ));
   }, [currentWidth]);
 
   const toggleSound = () => {
-    if (isPlaying) {
-      stop();
-    } else {
-      play();
+    audioContext.stopAllAudios();
+
+    if (!audioContext[mix].isPlaying) {
+      audioContext[mix].play();
     }
   };
 
@@ -43,7 +45,7 @@ export default function SoundPlayer({ backgroundColor }: IProps) {
         backgroundColor,
       }}
     >
-      {isPlaying ? (
+      {audioContext[mix].isPlaying ? (
         <Image
           src={pauseButton}
           alt="Pause sound button"

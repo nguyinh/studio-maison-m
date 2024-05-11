@@ -4,6 +4,7 @@ import { SupportedLocales, getDictionary } from "../dictionaries";
 
 interface IProps {
   illustrationSrc: StaticImageData;
+  mix: "deepCrunchy" | "punchyRock" | "vintageCrisp";
   title: string;
   sounds: string[];
   lang: SupportedLocales;
@@ -12,6 +13,7 @@ interface IProps {
 
 export default async function StudioSound({
   illustrationSrc,
+  mix,
   title,
   sounds,
   lang,
@@ -49,7 +51,7 @@ export default async function StudioSound({
         <div className="mt-auto flex flex-col gap-2">
           <p className="hidden md:block">{dict.studio.soundExample}</p>
 
-          <SoundPlayer backgroundColor={color} />
+          <SoundPlayer backgroundColor={color} mix={mix} />
         </div>
       </div>
     </div>

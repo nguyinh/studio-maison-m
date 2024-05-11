@@ -31,6 +31,7 @@ export default async function Studio({
         <div className="flex flex-row flex-wrap lg:*:basis-[45%] *:basis-[100%] gap-4 justify-between font-grotesk font-bold">
           <StudioSound
             illustrationSrc={deepCrunchy}
+            mix="deepCrunchy"
             title={dict.studio.deepCrunchy.title}
             sounds={dict.studio.deepCrunchy.sounds}
             lang={lang}
@@ -39,6 +40,7 @@ export default async function Studio({
 
           <StudioSound
             illustrationSrc={classicRock}
+            mix="punchyRock"
             title={dict.studio.classicRock.title}
             sounds={dict.studio.classicRock.sounds}
             lang={lang}
@@ -47,6 +49,7 @@ export default async function Studio({
 
           <StudioSound
             illustrationSrc={vintageCrisp}
+            mix="vintageCrisp"
             title={dict.studio.vintageCrisp.title}
             sounds={dict.studio.vintageCrisp.sounds}
             lang={lang}

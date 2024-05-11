@@ -36,7 +36,7 @@ export function middleware(request: NextRequest) {
 export const config = {
   matcher: [
     // Skip all internal paths (_next)
-    "/((?!_next|mp3|video|email).*)",
+    "/((?!_next|mp3|wav|video|email).*)",
     // Optional: only run on root (/) URL
     // '/'
   ],

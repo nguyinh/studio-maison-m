@@ -23,7 +23,7 @@
       "@/dictionaries/*": ["./[lang]/*"],
       "@/images/*": ["./public/svg/*", "./public/png/*"],
       "@/contexts/*": ["./app/(contexts)/*"],
-      "@/sounds/*": ["./public/mp3/*"],
+      "@/sounds/*": ["./public/mp3/*", "./public/wav/*"],
       "@/styles/*": ["./app/(styles)/*"]
     }
   },
