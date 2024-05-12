@@ -23,7 +23,7 @@ export default function StudioVideo() {
       className="object-cover h-full w-full"
       onClick={toggleMute}
     >
-      <source src="/videos/studio-video-compressed.mp4" type="video/mp4" />
+      <source src={process.env.STUDIO_VIDEO_URL} type="video/mp4" />
       Your browser does not support the video.
     </video>
   );
