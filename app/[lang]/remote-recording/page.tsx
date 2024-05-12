@@ -18,12 +18,12 @@ export default async function RemoteRecording({
 
   return (
     <div className="bg-background-remote-recording-1 flex flex-col items-center overflow-hidden *:px-4 md:*:px-0">
-      <section className="w-full flex flex-col md:flex-row items-center relative md:py-14 pt-14 md:*:basis-1/3 z-20">
+      <section className="w-full flex flex-col md:flex-row md:justify-between items-center relative md:py-14 pt-14 md:*:basis-1/3 z-20">
         <Image
           priority
           src={computer}
           alt="Computer illustration"
-          className="hidden md:block max-w-[33%] translate-y-16"
+          className="hidden md:block max-w-[33%] min-w-[33%] translate-y-16"
         />
 
         <div className="max-w-sm flex flex-col items-center justify-center gap-4">
@@ -46,6 +46,8 @@ export default async function RemoteRecording({
             <strong>{dict.remoteRecording.mobileDescription4}</strong>
           </p>
         </div>
+
+        <div className="hidden md:block" />
 
         <Image
           priority
