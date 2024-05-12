@@ -61,12 +61,13 @@
   },
   "contact": {
     "callUs": "Call us",
-    "sendEmail": "Or send us an email"
+    "sendEmail": "Send us an email",
+    "or": "or"
   },
   "faq": {
     "title": "FAQ",
     "question1": "I don't know what my project needs, can I still book a session?",
-    "answer1": "Yes absolutely! After completing the forms in the \"Book A Session\" tab you'll get an email where we can have a chat to figure out what you want out of the session and go from ther!",
+    "answer1": "Yes absolutely! After completing the forms in the \"Book A Session\" tab you'll get an email where we can have a chat to figure out what you want out of the session and go from there!",
     "question2": "Can we record a whole band at the same time?",
     "answer2": "Yes you can! The studio is equipped with drums, piano and guitar amps, so you'll be able to record everything at once if you want!",
     "question3": "Is this only a recording studio?",

@@ -26,6 +26,11 @@ export default async function Contact({ lang, className, hideTitle }: IProps) {
             {dict.contact.callUs}
           </button>
         </a>
+
+        <span className="hidden md:block font-chango font-medium">
+          {dict.contact.or}
+        </span>
+
         <a href="mailto:studiomaisonm@gmail.com" className="md:w-auto w-full">
           <button className="bg-[#479BFF] text-xl text-center font-grotesk font-extrabold border-solid border-2 border-black rounded-full px-8 py-2 drop-shadow-button hover:brightness-95 active:drop-shadow-none active:translate-y-1 w-full">
             {dict.contact.sendEmail}

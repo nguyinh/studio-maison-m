@@ -61,7 +61,8 @@
   },
   "contact": {
     "callUs": "Appelez nous",
-    "sendEmail": "Ou envoyez nous un mail"
+    "sendEmail": "Envoyez nous un mail",
+    "or": "ou"
   },
   "faq": {
     "title": "FAQ",
