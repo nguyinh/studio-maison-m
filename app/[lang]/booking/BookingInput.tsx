@@ -1,6 +1,6 @@
 "use client";
 
-import { ChangeEvent, useContext, useId } from "react";
+import { ChangeEvent, useContext, useId, useState } from "react";
 import { BookingContext, Hour } from "@/app/(contexts)/BookingProvider";
 import Calendar from "react-calendar";
 import { SupportedLocales, getDictionary } from "../dictionaries";
@@ -14,8 +14,11 @@ interface IProps {
 }
 
 export default function BookingInput({ lang, dict }: IProps) {
-  const { step, contact, date, setDate, setStep, setHour, setContact } =
+  const { step, contact, date, hour, setDate, setStep, setHour, setContact } =
     useContext(BookingContext);
+
+  const [emailError, setEmailError] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const onDateSelection = (selectedDate: unknown) => {
     setDate(selectedDate as Date);
@@ -32,15 +35,33 @@ export default function BookingInput({ lang, dict }: IProps) {
   };
 
   const onContactSubmit = async () => {
-    // TODO: test if email is valid
+    const emailRegex =
+      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+
+    if (!contact || !emailRegex.test(contact)) {
+      setEmailError(true);
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    const localeDate =
+      lang === "en"
+        ? dayjs(date).locale("en").format("D MMMM YYYY")
+        : dayjs(date).locale("fr").format("D MMMM YYYY");
+
     const response = await fetch("/emails", {
       method: "POST",
-      body: JSON.stringify({ email: contact }),
+      body: JSON.stringify({ email: contact, lang, date: localeDate, hour }),
     });
 
-    console.log(response);
+    if (response.status === 200) {
+      setStep("BOOKING_SUCCESS");
+    } else if (response.status === 422) {
+      setEmailError(true);
+    }
 
-    // setStep("BOOKING_SUCCESS");
+    setIsSubmitting(false);
   };
 
   const emailInputId = useId();
@@ -100,14 +121,18 @@ export default function BookingInput({ lang, dict }: IProps) {
               name="email"
               type="email"
               className="bg-[#F3EEFB] border-black border-2 rounded-sm w-full py-2 px-4"
-              onChange={onEmailChange}
+              style={{ borderColor: emailError ? "#e75c5c" : undefined }}
+              onChange={(event) => {
+                setEmailError(false);
+                onEmailChange(event);
+              }}
             />
           </div>
 
           <button
-            className="bg-[#CFB2FF] disabled:bg-[#DCDCDC] disabled:drop-shadow-button disabled:translate-y-0 rounded-full border-black border-2 drop-shadow-button hover:brightness-95 active:drop-shadow-none active:translate-y-1 px-4 py-2 mt-auto"
+            className="bg-[#CFB2FF] disabled:bg-[#DCDCDC] disabled:drop-shadow-button disabled:translate-y-0 rounded-full border-black border-2 drop-shadow-button hover:enabled:brightness-95 active:drop-shadow-none active:translate-y-1 px-4 py-2 mt-auto"
             onClick={onContactSubmit}
-            disabled={!contact}
+            disabled={!contact || isSubmitting}
           >
             {dict.booking.contactStep.button}
           </button>

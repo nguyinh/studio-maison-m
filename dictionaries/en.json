@@ -61,7 +61,7 @@
   },
   "contact": {
     "callUs": "Call us",
-    "sendEmail": "Send us an email",
+    "sendEmail": "Email us",
     "or": "or"
   },
   "faq": {
@@ -97,5 +97,15 @@
   "about": {
     "title": "About",
     "description": "Studio Maison M was founded by non-other than the drummer Sami ROGER in 2021. After 2 years of work and testing, it opened in 2023. It is located in Bondy, close enough to Paris to be accessible but still far enough to be able to make band practice or loud music playing possible at all times. Its constant evolution and new recording gears and instruments make it the perfect place to experiment and let your ideas flow without boundaries. Get ready to find weird instruments and stuff you won't find in an ordinary recording studio. You'll feel instantly home and cosy in this well decorated studio, the home you wish you could be in forever!"
+  },
+  "email": {
+    "booking": {
+      "object": "Your booking at Studio Maison M",
+      "preview": "Booking request received !",
+      "title": "Your booking at <strong>Studio Maison M</strong>",
+      "greeting": "Hi there !",
+      "body": "Thank you for taking the time to fill in our booking form, we'll get back to you shortly to confirm your slot! If you have any questions, don't hesitate to send us an e-mail 🙂",
+      "sign": "Studio Maison M"
+    }
   }
 }

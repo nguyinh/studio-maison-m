@@ -1,3 +1,4 @@
+import { Hour } from "@/contexts/BookingProvider";
 import {
   Body,
   Container,
@@ -13,24 +14,22 @@ import { Tailwind } from "@react-email/tailwind";
 import * as React from "react";
 
 interface BookingEmailProps {
-  preview: string;
-  title: string;
-  greeting: string;
-  body: string;
-  sign: string;
+  date: string;
+  customerContact: string;
+  hour: Hour;
 }
 
-export const StudioMaisonMBookingEmail = ({
-  preview,
-  title,
-  greeting,
-  body,
-  sign,
+export const BookingRequestEmail = ({
+  date,
+  customerContact,
+  hour,
 }: BookingEmailProps) => {
   return (
     <Html>
       <Head />
-      <Preview>{preview}</Preview>
+      <Preview>
+        Une nouvelle demande de réservation vient d`&apos;`arriver !
+      </Preview>
       <Tailwind>
         <Body className="bg-white my-auto mx-auto font-sans px-2">
           <Container className="border-solid border-black border-2 bg-[#fffaec] rounded my-[40px] mx-auto p-[20px] max-w-[465px]">
@@ -43,16 +42,20 @@ export const StudioMaisonMBookingEmail = ({
               />
             </Section>
             <Heading className="text-black text-[24px] font-normal text-center p-0 my-[30px] mx-0">
-              {title}
+              Hello Samsam !
             </Heading>
             <Text className="text-black text-[14px] leading-[24px]">
-              {greeting}
+              Nouvelle demande de réservation du Studio Maison M pour le {date}{" "}
+              ({hour})!
             </Text>
             <Text className="text-black text-[14px] leading-[24px]">
-              {body}
+              Tu peux recontacter ton prospect via cet email {customerContact}
+            </Text>
+            <Text className="text-black text-[14px] leading-[24px]">
+              Bien cordialement avec des bisous
             </Text>
             <Text className="text-black font-bold text-[14px] leading-[24px]">
-              {sign}
+              Ton website qui déchire
             </Text>
           </Container>
         </Body>
@@ -61,4 +64,4 @@ export const StudioMaisonMBookingEmail = ({
   );
 };
 
-export default StudioMaisonMBookingEmail;
+export default BookingRequestEmail;

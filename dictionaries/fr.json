@@ -66,7 +66,7 @@
   },
   "faq": {
     "title": "FAQ",
-    "question1": "Je ne sais pas ce dont mon projet a besoin, je peux quand même réserver une  session ?",
+    "question1": "Je ne sais pas ce dont mon projet a besoin, je peux quand même réserver une session ?",
     "answer1": "Oui bien sûr ! Après avoir rempli le formulaire dans la rubrique \"Réserver une Session\" vous recevrez un mail et nous pourrons discuter pour voir ce aque vous attendez de la session et partir de là !",
     "question2": "Est-ce qu'on peut enregistrer tout un groupe à la fois ?",
     "answer2": "Oui c'est possible ! Le studio est équippé de batteries, piano et ampli de guitare donc vous pourrez tout enregistrer en même temps si vous voulez !",
@@ -97,5 +97,15 @@
   "about": {
     "title": "A propos",
     "description": "Le Studio Maison M a été fondé par nul-autre que le batteur Sami ROGER en 2021. Après 2 ans de travaux et de tests, il a ouvert ses portes en 2023. Il se situe à Bondy, proche de Paris pour être accessible mais suffisemment loin pour pouvoir faire de le musique à toute heure ! Son évolution constante et nouveaux micros et instruments en font l'endroit parfait pour laisser parler vos idées sans contraintes. Préparez vous à trouver des instruments bizarres et autres babiolles que vous ne trouveriez pas dans un studio ordinaire. Vous vous sentirez instantanément comme à la maison dans ce studio bien aménager et décoré: La Maison dans laquelle vous aimeriez rester à jamais !"
+  },
+  "email": {
+    "booking": {
+      "object": "Votre réservation au Studio Maison M",
+      "preview": "Demande de réservation reçue !",
+      "title": "Votre réservation au <strong>Studio Maison M</strong>",
+      "greeting": "Hello !",
+      "body": "Merci d'avoir pris le temps de remplir notre formulaire de réservation, nous reviendrons rapidement vers vous afin de confirmer votre créneau ! Si vous avez des questions n'hésitez pas à nous renvoyer un e-mail 🙂",
+      "sign": "Studio Maison M"
+    }
   }
 }
