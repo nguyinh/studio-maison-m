@@ -21,7 +21,7 @@ export default async function About({
             priority
             src={studioBackground}
             alt="Studio background"
-            className="max-h-[40dvh] overflow-hidden object-cover"
+            className="max-h-[40dvh] overflow-hidden object-cover w-full"
           />
           <div className="hidden md:flex font-chango text-6xl absolute top-0 w-full justify-center">
             <h2>{dict.about.title}</h2>
