@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
 import { Chango, Outfit } from "next/font/google";
 import localFont from "next/font/local";
 import { Providers } from "@/contexts/Providers";
@@ -55,6 +56,8 @@ export default function RootLayout({
       <body
         className={`${cabinetGrotesk.variable} ${outfit.variable} ${chango.variable} font-sans`}
       >
+        <Analytics />
+
         <Providers>{children}</Providers>
       </body>
     </html>
