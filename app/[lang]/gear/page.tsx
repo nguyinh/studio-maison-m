@@ -13,9 +13,50 @@ import {
 import GearSection from "./GearSection";
 import Contact from "@/app/(components)/Contact";
 import Image from "next/image";
+import type { Metadata } from "next";
 
 interface PageParams {
   params: { lang: SupportedLocales };
+}
+
+export async function generateMetadata({
+  params,
+}: PageParams): Promise<Metadata> {
+  return {
+    title: params.lang === "fr" ? "Matos" : "Gear",
+    description:
+      params.lang === "fr"
+        ? "Choisissez les micros et instruments que vous souhaitez utiliser pour votre session"
+        : "Choose what mics and instruments you would like to use in your session",
+    keywords: [
+      "studio",
+      "music",
+      "mixing",
+      "mastering",
+      "recording",
+      "rehearsals",
+      "podcast",
+      "drums",
+      "piano",
+      "percussions",
+    ],
+    creator: "Nguyinh",
+    openGraph: {
+      type: "website",
+      url: "https://studio-maison-m.com",
+      title: params.lang === "fr" ? "Matos" : "Gear",
+      description:
+        params.lang === "fr"
+          ? "Choisissez les micros et instruments que vous souhaitez utiliser pour votre session"
+          : "Choose what mics and instruments you would like to use in your session",
+      siteName: "Studio Maison M",
+      images: [
+        {
+          url: "https://d1fuzbe05rn43r.cloudfront.net/logo.png",
+        },
+      ],
+    },
+  };
 }
 
 export default async function About({

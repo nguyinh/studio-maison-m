@@ -10,12 +10,14 @@ import Link from "next/link";
 import { useContext } from "react";
 import { MenuContext } from "@/contexts/MenuContext";
 import { cn } from "@/lib/utils";
+import { SupportedLocales } from "../[lang]/dictionaries";
 
 interface IProps {
   bookSession: string;
   gear: string;
   remoteRecording: string;
   about: string;
+  lang: SupportedLocales;
 }
 
 export default function MobileMenuContent({
@@ -23,6 +25,7 @@ export default function MobileMenuContent({
   gear,
   remoteRecording,
   about,
+  lang,
 }: IProps) {
   const { isMobileMenuOpen, setIsMobileMenuOpen } = useContext(MenuContext);
 
@@ -39,7 +42,7 @@ export default function MobileMenuContent({
       onClick={closeMenu}
     >
       <Link
-        href="/booking"
+        href={`/${lang}/booking`}
         className="bg-background-booking flex justify-start items-center border-b-[1px] border-black"
       >
         {bookSession}
@@ -62,19 +65,19 @@ export default function MobileMenuContent({
         </AccordionItem>
       </Accordion> */}
       <Link
-        href="/gear"
+        href={`/${lang}/gear`}
         className="bg-background-gear-1 flex justify-start items-center border-b-[1px] border-black"
       >
         {gear}
       </Link>
       <Link
-        href="/remote-recording"
+        href={`/${lang}/remote-recording`}
         className="bg-background-remote-recording-1 flex justify-start items-center border-b-[1px] border-black"
       >
         {remoteRecording}
       </Link>
       <Link
-        href="/about"
+        href={`/${lang}/about`}
         className="bg-background-about-1 flex justify-start items-center border-b-[1px] border-black"
       >
         {about}

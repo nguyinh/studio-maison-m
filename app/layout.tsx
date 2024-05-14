@@ -42,7 +42,10 @@ const cabinetGrotesk = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Studio Maison M",
+  title: {
+    template: "%s | Studio Maison M",
+    default: "Studio Maison M",
+  },
   description: "",
 };
 

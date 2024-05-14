@@ -13,7 +13,6 @@ function getLocale(request: NextRequest) {
   let defaultLocale = "fr";
 
   return match(languages, locales, defaultLocale);
-  // return "fr";
 }
 
 export function middleware(request: NextRequest) {

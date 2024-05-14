@@ -16,16 +16,32 @@ export async function generateMetadata({
   params,
 }: PageParams): Promise<Metadata> {
   return {
-    title: "Studio Maison M",
-    description: params.lang === "fr" ? "english" : "french",
-    keywords: ["studio", "music", "mixing", "mastering", "recording"],
-    themeColor: "#FFFAEC",
+    description:
+      params.lang === "fr"
+        ? "Enregistrer vos chansons avec nos microphones sélectionnés avec soin et nos instruments de haute qualité. (Vous pouvez aussi utiliser le studio pour répéter ou bien créer du contenu pour les réseaux sociaux.)"
+        : "Record your songs using our carefully selected microphones and our top-tier instruments. (You can also use the space for rehearsals or create social media content.)",
+    keywords: [
+      "studio",
+      "music",
+      "mixing",
+      "mastering",
+      "recording",
+      "rehearsals",
+      "podcast",
+      "drums",
+      "piano",
+      "percussions",
+    ],
     creator: "Nguyinh",
     openGraph: {
       type: "website",
       url: "https://studio-maison-m.com",
-      title: "The Studio Maison M",
-      description: "My Website Description",
+      title:
+        params.lang === "fr" ? "Le Studio Maison M" : "The Studio Maison M",
+      description:
+        params.lang === "fr"
+          ? "Enregistrer vos chansons avec nos microphones sélectionnés avec soin et nos instruments de haute qualité. (Vous pouvez aussi utiliser le studio pour répéter ou bien créer du contenu pour les réseaux sociaux.)"
+          : "Record your songs using our carefully selected microphones and our top-tier instruments. (You can also use the space for rehearsals or create social media content.)",
       siteName: "Studio Maison M",
       images: [
         {

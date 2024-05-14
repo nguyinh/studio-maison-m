@@ -14,16 +14,32 @@ export async function generateMetadata({
   params,
 }: PageParams): Promise<Metadata> {
   return {
-    title: "Studio Maison M",
-    description: params.lang === "fr" ? "english" : "french",
-    keywords: ["studio", "music", "mixing", "mastering", "recording"],
-    themeColor: "#FFFAEC",
+    title: params.lang === "fr" ? "Réservation" : "Booking",
+    description:
+      params.lang === "fr"
+        ? "Réserver votre prochaine session dans notre Studio dédié à l'expression créative"
+        : "Book your next session in our Studio created exclusively to allow effortless expression of ideas.",
+    keywords: [
+      "studio",
+      "music",
+      "mixing",
+      "mastering",
+      "recording",
+      "rehearsals",
+      "podcast",
+      "drums",
+      "piano",
+      "percussions",
+    ],
     creator: "Nguyinh",
     openGraph: {
       type: "website",
       url: "https://studio-maison-m.com",
-      title: "Booking",
-      description: "My Website Description",
+      title: params.lang === "fr" ? "Réservation" : "Booking",
+      description:
+        params.lang === "fr"
+          ? "Réserver votre prochaine session dans notre Studio dédié à l'expression créative"
+          : "Book your next session in our Studio created exclusively to allow effortless expression of ideas.",
       siteName: "Studio Maison M",
       images: [
         {

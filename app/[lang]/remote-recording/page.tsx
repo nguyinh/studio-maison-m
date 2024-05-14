@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { SupportedLocales, getDictionary } from "../dictionaries";
 import Contact from "@/app/(components)/Contact";
@@ -9,6 +10,46 @@ import mobileMousePath from "@/images/mobile-mouse-path.svg";
 
 interface PageParams {
   params: { lang: SupportedLocales };
+}
+
+export async function generateMetadata({
+  params,
+}: PageParams): Promise<Metadata> {
+  return {
+    title: params.lang === "fr" ? "Session à distance" : "Remote recording",
+    description:
+      params.lang === "fr"
+        ? "Demandez à ce que l'on enregistre des instruments pour vos chansons sans quitter chez vous"
+        : "Request us to record instruments for your songs without leaving your home",
+    keywords: [
+      "studio",
+      "music",
+      "mixing",
+      "mastering",
+      "recording",
+      "rehearsals",
+      "podcast",
+      "drums",
+      "piano",
+      "percussions",
+    ],
+    creator: "Nguyinh",
+    openGraph: {
+      type: "website",
+      url: "https://studio-maison-m.com",
+      title: params.lang === "fr" ? "Session à distance" : "Remote recording",
+      description:
+        params.lang === "fr"
+          ? "Demandez à ce que l'on enregistre des instruments pour vos chansons sans quitter chez vous"
+          : "Request us to record instruments for your songs without leaving your home",
+      siteName: "Studio Maison M",
+      images: [
+        {
+          url: "https://d1fuzbe05rn43r.cloudfront.net/logo.png",
+        },
+      ],
+    },
+  };
 }
 
 export default async function RemoteRecording({
