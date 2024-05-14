@@ -13,14 +13,12 @@ interface IProps {
 export default async function Navbar({ lang }: IProps) {
   const dict = await getDictionary(lang);
 
-  {
-    /* TODO shrink on scroll */
-  }
+  /* TODO shrink on scroll */
   return (
     <>
       <nav className="flex flex-col gap-2 bg-main-background border-b-black border-b-2 sticky z-10 sm:p-2 p-4">
         <div className="flex flex-row gap-14 justify-center relative">
-          <Link href="/studio" className="flex justify-center">
+          <Link href={`/${lang}/studio`} className="flex justify-center">
             <Image
               priority
               src={logo}
@@ -33,10 +31,12 @@ export default async function Navbar({ lang }: IProps) {
         </div>
 
         <div className="hidden sm:flex flex-row gap-14 justify-center font-grotesk font-extrabold items-center">
-          <Link href="/booking">{dict.navbar.booking}</Link>
-          <Link href="/gear">{dict.navbar.gear}</Link>
-          <Link href="/remote-recording">{dict.navbar.remoteRecording}</Link>
-          <Link href="/about">{dict.navbar.about}</Link>
+          <Link href={`/${lang}/booking`}>{dict.navbar.booking}</Link>
+          <Link href={`/${lang}/gear`}>{dict.navbar.gear}</Link>
+          <Link href={`/${lang}/remote-recording`}>
+            {dict.navbar.remoteRecording}
+          </Link>
+          <Link href={`/${lang}/about`}>{dict.navbar.about}</Link>
           <LanguageToggle currentLocale={lang} />
         </div>
       </nav>
@@ -46,6 +46,7 @@ export default async function Navbar({ lang }: IProps) {
         gear={dict.navbar.gear}
         remoteRecording={dict.navbar.remoteRecording}
         about={dict.navbar.about}
+        lang={lang}
       />
     </>
   );
