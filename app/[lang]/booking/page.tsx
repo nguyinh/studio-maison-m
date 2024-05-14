@@ -1,13 +1,37 @@
+import type { Metadata } from "next";
 import Contact from "@/app/(components)/Contact";
 import { SupportedLocales, getDictionary } from "../dictionaries";
 import BookingInput from "./BookingInput";
 import BookingStep from "./BookingStep";
 import StepInstructions from "./StepInstructions";
-
 import "@/styles/Calendar.css";
 
 interface PageParams {
   params: { lang: SupportedLocales };
+}
+
+export async function generateMetadata({
+  params,
+}: PageParams): Promise<Metadata> {
+  return {
+    title: "Studio Maison M",
+    description: params.lang === "fr" ? "english" : "french",
+    keywords: ["studio", "music", "mixing", "mastering", "recording"],
+    themeColor: "#FFFAEC",
+    creator: "Nguyinh",
+    openGraph: {
+      type: "website",
+      url: "https://studio-maison-m.com",
+      title: "Booking",
+      description: "My Website Description",
+      siteName: "Studio Maison M",
+      images: [
+        {
+          url: "https://d1fuzbe05rn43r.cloudfront.net/logo.png",
+        },
+      ],
+    },
+  };
 }
 
 export default async function Booking({

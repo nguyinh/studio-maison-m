@@ -1,5 +1,5 @@
+import { Metadata } from "next";
 import { SupportedLocales, getDictionary } from "../dictionaries";
-
 import deepCrunchy from "@/images/studio-sounds/deep-crunchy-sounds.jpg";
 import classicRock from "@/images/studio-sounds/classic-rock-sounds.jpeg";
 import vintageCrisp from "@/images/studio-sounds/vintage-crisp-sounds.jpeg";
@@ -10,6 +10,30 @@ import StudioVideo from "./StudioVideo";
 
 interface PageParams {
   params: { lang: SupportedLocales };
+}
+
+export async function generateMetadata({
+  params,
+}: PageParams): Promise<Metadata> {
+  return {
+    title: "Studio Maison M",
+    description: params.lang === "fr" ? "english" : "french",
+    keywords: ["studio", "music", "mixing", "mastering", "recording"],
+    themeColor: "#FFFAEC",
+    creator: "Nguyinh",
+    openGraph: {
+      type: "website",
+      url: "https://studio-maison-m.com",
+      title: "The Studio Maison M",
+      description: "My Website Description",
+      siteName: "Studio Maison M",
+      images: [
+        {
+          url: "https://d1fuzbe05rn43r.cloudfront.net/logo.png",
+        },
+      ],
+    },
+  };
 }
 
 export default async function Studio({
