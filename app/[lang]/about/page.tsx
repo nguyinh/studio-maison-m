@@ -14,7 +14,10 @@ export async function generateMetadata({
 }: PageParams): Promise<Metadata> {
   return {
     title: params.lang === "fr" ? "À propos" : "About",
-    description: params.lang === "fr" ? "english" : "french",
+    description:
+      params.lang === "fr"
+        ? "Studio Maison M a été fondé par nul-autre que le batteur Sami ROGER en 2021."
+        : "Studio Maison M was founded by non-other than the drummer Sami ROGER in 2021.",
     keywords: [
       "studio",
       "music",
@@ -31,8 +34,11 @@ export async function generateMetadata({
     openGraph: {
       type: "website",
       url: "https://studio-maison-m.com",
-      title: "Booking",
-      description: "My Website Description",
+      title: `${params.lang === "fr" ? "À propos" : "About"} | Studio Maison M`,
+      description:
+        params.lang === "fr"
+          ? "Studio Maison M a été fondé par nul-autre que le batteur Sami ROGER en 2021."
+          : "Studio Maison M was founded by non-other than the drummer Sami ROGER in 2021.",
       siteName: "Studio Maison M",
       images: [
         {

@@ -44,7 +44,7 @@ export async function generateMetadata({
     openGraph: {
       type: "website",
       url: "https://studio-maison-m.com",
-      title: params.lang === "fr" ? "Matos" : "Gear",
+      title: `${params.lang === "fr" ? "Matos" : "Gear"} | Studio Maison M`,
       description:
         params.lang === "fr"
           ? "Choisissez les micros et instruments que vous souhaitez utiliser pour votre session"

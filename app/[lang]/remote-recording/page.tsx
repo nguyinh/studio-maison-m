@@ -37,7 +37,9 @@ export async function generateMetadata({
     openGraph: {
       type: "website",
       url: "https://studio-maison-m.com",
-      title: params.lang === "fr" ? "Session à distance" : "Remote recording",
+      title: `${
+        params.lang === "fr" ? "Session à distance" : "Remote recording"
+      } | Studio Maison M`,
       description:
         params.lang === "fr"
           ? "Demandez à ce que l'on enregistre des instruments pour vos chansons sans quitter chez vous"

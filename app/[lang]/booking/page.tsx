@@ -35,7 +35,9 @@ export async function generateMetadata({
     openGraph: {
       type: "website",
       url: "https://studio-maison-m.com",
-      title: params.lang === "fr" ? "Réservation" : "Booking",
+      title: `${
+        params.lang === "fr" ? "Réservation" : "Booking"
+      } | Studio Maison M`,
       description:
         params.lang === "fr"
           ? "Réserver votre prochaine session dans notre Studio dédié à l'expression créative"
