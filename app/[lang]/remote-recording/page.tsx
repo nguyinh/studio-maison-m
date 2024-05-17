@@ -4,7 +4,7 @@ import { SupportedLocales, getDictionary } from "../dictionaries";
 import Contact from "@/app/(components)/Contact";
 
 import computer from "@/images/computer.svg";
-import arrow from "@/images/arrow.svg";
+import arrow from "@/images/bouncing-arrow.svg";
 import mousePath from "@/images/mouse-path.svg";
 import mobileMousePath from "@/images/mobile-mouse-path.svg";
 
