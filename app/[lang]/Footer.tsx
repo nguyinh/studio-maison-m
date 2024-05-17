@@ -18,7 +18,7 @@ export default async function Footer({ lang }: IProps) {
   return (
     <section className="bg-black flex flex-col gap-8 py-8 pb-16 px-4 md:px-16 z-10 relative text-white">
       <div className="flex flex-row items-center justify-between">
-        <Link href="/studio">
+        <Link href={`/${lang}/studio`}>
           <Image
             priority
             src={invertedLogo}
@@ -34,15 +34,17 @@ export default async function Footer({ lang }: IProps) {
 
       <nav className="font-grotesk font-extrabold flex flex-row w-full">
         <div className="flex flex-col basis-full">
-          <Link href="/booking">{dict.navbar.booking}</Link>
-          <Link href="/gear">{dict.navbar.gear}</Link>
-          <Link href="/remote-recording">{dict.navbar.remoteRecording}</Link>
+          <Link href={`/${lang}/booking`}>{dict.navbar.booking}</Link>
+          <Link href={`/${lang}/gear`}>{dict.navbar.gear}</Link>
+          <Link href={`/${lang}/remote-recording`}>
+            {dict.navbar.remoteRecording}
+          </Link>
         </div>
 
         <div className="border-l-[1px] border-white basis-8" />
 
         <div className="flex flex-col basis-full">
-          <Link href="/about">{dict.navbar.about}</Link>
+          <Link href={`/${lang}/about`}>{dict.navbar.about}</Link>
         </div>
       </nav>
 
