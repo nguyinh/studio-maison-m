@@ -39,8 +39,8 @@ export default async function StudioSound({
         </div>
       </div>
 
-      <div className="py-8 pl-2 pr-4 flex flex-col md:items-stretch items-center font-extrabold gap-4 w-full">
-        <ul className="list-disc">
+      <div className="py-4 pl-2 pr-4 flex flex-col md:items-stretch items-center font-extrabold gap-4 w-full">
+        <ul className="list-disc self-start">
           {sounds.map((sound) => (
             <li key={sound} className="ml-5">
               {sound}

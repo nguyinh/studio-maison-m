@@ -13,7 +13,7 @@
     "soundExample": "Exemple :",
     "deepCrunchy": {
       "title": "Deep&Crunchy",
-      "sounds": ["Profond", "Précis", "Solide"]
+      "sounds": ["Profond", "Précis", "Son typique de ballade"]
     },
     "classicRock": {
       "title": "Punchy Rock",
@@ -21,7 +21,7 @@
     },
     "vintageCrisp": {
       "title": "Vintage Crisp",
-      "sounds": ["Old School"]
+      "sounds": ["Old School", "Sec", "Comme un vinyle des années 1950"]
     }
   },
   "booking": {
