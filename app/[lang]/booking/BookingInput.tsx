@@ -14,8 +14,18 @@ interface IProps {
 }
 
 export default function BookingInput({ lang, dict }: IProps) {
-  const { step, contact, date, hour, setDate, setStep, setHour, setContact } =
-    useContext(BookingContext);
+  const {
+    step,
+    contact,
+    date,
+    hour,
+    phone,
+    setDate,
+    setStep,
+    setHour,
+    setContact,
+    setPhone,
+  } = useContext(BookingContext);
 
   const [emailError, setEmailError] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -32,6 +42,10 @@ export default function BookingInput({ lang, dict }: IProps) {
 
   const onEmailChange = (event: ChangeEvent<HTMLInputElement>) => {
     setContact(event.target.value ?? null);
+  };
+
+  const onPhoneChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setPhone(event.target.value ?? null);
   };
 
   const onContactSubmit = async () => {
@@ -52,7 +66,13 @@ export default function BookingInput({ lang, dict }: IProps) {
 
     const response = await fetch("/emails", {
       method: "POST",
-      body: JSON.stringify({ email: contact, lang, date: localeDate, hour }),
+      body: JSON.stringify({
+        email: contact,
+        lang,
+        date: localeDate,
+        hour,
+        phone,
+      }),
     });
 
     if (response.status === 200) {
@@ -65,6 +85,7 @@ export default function BookingInput({ lang, dict }: IProps) {
   };
 
   const emailInputId = useId();
+  const phoneInputId = useId();
 
   return (
     <div className="font-grotesk font-bold flex flex-row items-center justify-center">
@@ -84,7 +105,7 @@ export default function BookingInput({ lang, dict }: IProps) {
             {dict.booking.hourStep.instruction}
           </h4>
 
-          <div className="flex flex-row justify-center gap-4 h-full">
+          <div className="flex flex-row justify-center gap-4 h-full *:basis-1/2">
             <button
               className="bg-[#EEF3F1] border-black border-2 rounded-md flex-1 drop-shadow-button hover:brightness-95 active:drop-shadow-none active:translate-y-1"
               onClick={() => onHourSelection("MORNING")}
@@ -94,7 +115,7 @@ export default function BookingInput({ lang, dict }: IProps) {
             </button>
 
             <button
-              className="bg-[#EEF3F1] border-black border-2 rounded-md flex-1 drop-shadow-button hover:brightness-95 active:drop-shadow-none active:translate-y-1"
+              className="bg-[#EEF3F1] p-2 border-black border-2 rounded-md flex-1 drop-shadow-button hover:brightness-95 active:drop-shadow-none active:translate-y-1"
               onClick={() => onHourSelection("AFTERNOON")}
             >
               <p>{dict.booking.hourStep.afternoonBookingType}</p>
@@ -107,7 +128,7 @@ export default function BookingInput({ lang, dict }: IProps) {
       {/* <p>{step === "GEAR_SELECTION" && instructions.gear}</p> */}
 
       {step === "EMAIL_INPUT" && (
-        <div className="w-[350px] h-[323px] bg-white border-black border-2 rounded-[20px] flex flex-col gap-2 p-4">
+        <div className="w-[350px] min-h-[380px] bg-white border-black border-2 rounded-[20px] flex flex-col gap-2 p-4">
           <h4 className="font-grotesk text-2xl font-extrabold text-center">
             {dict.booking.contactStep.title}
           </h4>
@@ -115,7 +136,9 @@ export default function BookingInput({ lang, dict }: IProps) {
           <p>{dict.booking.contactStep.instruction}</p>
 
           <div>
-            <label htmlFor={emailInputId}>Your e-mail TBT:</label>
+            <label htmlFor={emailInputId}>
+              {dict.booking.contactStep.emailInput}
+            </label>
             <input
               id={emailInputId}
               name="email"
@@ -125,6 +148,23 @@ export default function BookingInput({ lang, dict }: IProps) {
               onChange={(event) => {
                 setEmailError(false);
                 onEmailChange(event);
+              }}
+            />
+          </div>
+
+          <div>
+            <label htmlFor={phoneInputId}>
+              {dict.booking.contactStep.phoneInput}
+            </label>
+            <input
+              id={phoneInputId}
+              name="phone"
+              type="phone"
+              placeholder="facultatif"
+              className="bg-[#F3EEFB] border-black border-2 rounded-sm w-full py-2 px-4"
+              // style={{ borderColor: phoneError ? "#e75c5c" : undefined }}
+              onChange={(event) => {
+                onPhoneChange(event);
               }}
             />
           </div>
@@ -153,9 +193,15 @@ export default function BookingInput({ lang, dict }: IProps) {
             </p>
             <p>{dict.booking.bookingCompleteStep.location.address}</p>
             <p>
-              {lang === "en"
-                ? dayjs(date).locale("en").format("[The] D MMMM [at] h:mm A")
-                : dayjs(date).locale("fr").format("[Le] D MMMM [à] h:mm")}
+              {`${
+                lang === "en"
+                  ? dayjs(date).locale("en").format("[The] D MMMM")
+                  : dayjs(date).locale("fr").format("[Le] D MMMM")
+              } (${
+                hour === "MORNING"
+                  ? dict.booking.morning
+                  : dict.booking.afternoon
+              })`}
             </p>
           </div>
         </div>

@@ -88,9 +88,9 @@ export default function BookingStep({ lang, dict }: IProps) {
             {step === "HOUR_SELECTION"
               ? dict.booking.time
               : hour === "MORNING"
-              ? dict.booking.morning
+              ? dict.booking.am
               : hour === "AFTERNOON"
-              ? dict.booking.afternoon
+              ? dict.booking.pm
               : ""}
           </div>
 

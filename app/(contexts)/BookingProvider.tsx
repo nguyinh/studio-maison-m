@@ -18,10 +18,12 @@ export const BookingContext = createContext<{
   date: Date | null;
   hour: Hour;
   contact: string | null;
+  phone: string | null;
   setStep: Dispatch<SetStateAction<Step>>;
   setDate: Dispatch<SetStateAction<Date | null>>;
   setHour: Dispatch<SetStateAction<Hour>>;
   setContact: Dispatch<SetStateAction<string | null>>;
+  setPhone: Dispatch<SetStateAction<string | null>>;
 }>({
   step: "DAY_SELECTION",
   setStep: () => {},
@@ -31,6 +33,8 @@ export const BookingContext = createContext<{
   setHour: () => {},
   contact: null,
   setContact: () => {},
+  phone: null,
+  setPhone: () => {},
 });
 
 export function BookingProvider({ children }: PropsWithChildren) {
@@ -38,6 +42,7 @@ export function BookingProvider({ children }: PropsWithChildren) {
   const [date, setDate] = useState<Date | null>(null);
   const [hour, setHour] = useState<Hour>(null);
   const [contact, setContact] = useState<string | null>(null);
+  const [phone, setPhone] = useState<string | null>(null);
 
   return (
     <BookingContext.Provider
@@ -50,6 +55,8 @@ export function BookingProvider({ children }: PropsWithChildren) {
         setHour,
         contact,
         setContact,
+        phone,
+        setPhone,
       }}
     >
       {children}

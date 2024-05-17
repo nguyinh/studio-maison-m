@@ -28,8 +28,10 @@
     "title": "Réserver une session",
     "description": "Vous pouvez réserver un créneau le matin ou l'après-midi, parce que peu importe si cela prends 3 minutes ou 3 heures, vous ne repartirez pas tant que vous n'etes pas satisfait du résultat !",
     "mobileDescription": "Réserver ma session à la MaisonM",
-    "morning": "AM",
-    "afternoon": "PM",
+    "morning": "Matin",
+    "afternoon": "Après-midi",
+    "am": "AM",
+    "pm": "PM",
     "day": "Jour",
     "time": "Heure",
     "finish": "Fini !",
@@ -47,7 +49,11 @@
     "contactStep": {
       "title": "Une dernière chose...",
       "instruction": "Nous avons besoin de votre e-mail pour complèter la reservation",
-      "button": "Réserver la meilleure session au monde !"
+      "button": "Réserver la meilleure session au monde !",
+      "emailInput": "Votre email:",
+      "phoneInput": "Votre numéro de téléphone:",
+      "mandatory": "Requis",
+      "optional": "Optionnel"
     },
     "bookingCompleteStep": {
       "message": "Soyez prêts",

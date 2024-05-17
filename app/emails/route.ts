@@ -13,6 +13,7 @@ export async function POST(request: NextRequest) {
     lang: SupportedLocales;
     date: string;
     hour: Hour;
+    phone: string | null;
   } = await request.json();
 
   const dict = await getDictionary(body.lang);
@@ -68,6 +69,7 @@ export async function POST(request: NextRequest) {
       date: body.date,
       customerContact: body.email,
       hour: body.hour,
+      phone: body.phone,
     }),
   });
 

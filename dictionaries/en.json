@@ -28,8 +28,10 @@
     "title": "Book a session",
     "description": "Booking a session works in mornings or afternoons, because I don't care if it takes 3 minutes or 3 hours, you won't leave until you're happy with the results!",
     "mobileDescription": "Book my session at Studio Maison M",
-    "morning": "AM",
-    "afternoon": "PM",
+    "morning": "Morning",
+    "afternoon": "Afternoon",
+    "am": "AM",
+    "pm": "PM",
     "day": "Day",
     "time": "Time",
     "finish": "Finish !",
@@ -47,7 +49,11 @@
     "contactStep": {
       "title": "One last thing...",
       "instruction": "We need your e-mail to complete your booking",
-      "button": "Book the best session ever!"
+      "button": "Book the best session ever!",
+      "emailInput": "Your email:",
+      "phoneInput": "Your phone number:",
+      "mandatory": "Mandatory",
+      "optional": "Optional"
     },
     "bookingCompleteStep": {
       "message": "Be ready !",

@@ -17,12 +17,14 @@ interface BookingEmailProps {
   date: string;
   customerContact: string;
   hour: Hour;
+  phone: string | null;
 }
 
 export const BookingRequestEmail = ({
   date,
   customerContact,
   hour,
+  phone,
 }: BookingEmailProps) => {
   return (
     <Html>
@@ -49,8 +51,15 @@ export const BookingRequestEmail = ({
               ({hour})!
             </Text>
             <Text className="text-black text-[14px] leading-[24px]">
-              Tu peux recontacter ton prospect via cet email {customerContact}
+              Tu peux recontacter ton prospect via:
+              <Text> 📧 {customerContact}</Text>
+              {phone && (
+                <Text className="text-black text-[14px] leading-[24px]">
+                  📞 {phone}
+                </Text>
+              )}
             </Text>
+
             <Text className="text-black text-[14px] leading-[24px]">
               Bien cordialement avec des bisous
             </Text>
