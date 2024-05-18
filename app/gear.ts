@@ -7,6 +7,7 @@ import audioTechnica from "@/images/gear/microphones/audio-technica-atm-450.jpg"
 import shureBeta91a from "@/images/gear/microphones/shure-beta-91a.jpg";
 import shureBeta52a from "@/images/gear/microphones/shure-beta-52a.jpg";
 import shureSm57 from "@/images/gear/microphones/shure-sm-57.jpg";
+import k84 from "@/images/gear/microphones/k84.jpg";
 
 import sonor14x5Swinger from "@/images/gear/snare-drums/sonor-14x5-swinger.jpg";
 import sonorArtist14x6Cottonwood from "@/images/gear/snare-drums/sonor-artist-14x6-cottonwood.jpg";
@@ -27,6 +28,7 @@ import VintagePureRide from "@/images/gear/cymbales/20-vintage-pure-ride.jpg";
 import BigAppleDarkRide from "@/images/gear/cymbales/22-big-apple-dark-ride.jpg";
 import aaxStudioRide from "@/images/gear/cymbales/aax-studio-ride.jpg";
 
+import pianoZimmermann from "@/images/gear/instruments/piano-zimmermann.jpg";
 import mesaBoogieDc5 from "@/images/gear/instruments/mesa-boogie-dc-5.jpg";
 import bongosLpFiberglass from "@/images/gear/instruments/bongos-lp-fiberglass.jpg";
 import rainStickGuiro from "@/images/gear/instruments/rain-stick-guiro.jpg";
@@ -72,6 +74,11 @@ export const microphones: GearElement[] = [
   {
     name: "Audio Technica ATM 450",
     image: audioTechnica,
+    titleBackgroundColor: "#C3D8FF",
+  },
+  {
+    name: "K84",
+    image: k84,
     titleBackgroundColor: "#C3D8FF",
   },
   {
@@ -183,6 +190,11 @@ export const cymbales: GearElement[] = [
 ];
 
 export const instruments: GearElement[] = [
+  {
+    name: "Piano Zimmermann",
+    image: pianoZimmermann,
+    titleBackgroundColor: "#DDC1FF",
+  },
   {
     name: "Mesa Boogie DC-5",
     image: mesaBoogieDc5,
