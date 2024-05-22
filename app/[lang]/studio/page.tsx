@@ -18,7 +18,7 @@ export async function generateMetadata({
   return {
     description:
       params.lang === "fr"
-        ? "Enregistrer vos chansons avec nos microphones sélectionnés avec soin et nos instruments de haute qualité."
+        ? "Enregistrez vos chansons avec nos microphones sélectionnés avec soin et nos instruments de haute qualité."
         : "Record your songs using our carefully selected microphones and our top-tier instruments.",
     keywords: [
       "studio",
@@ -40,8 +40,8 @@ export async function generateMetadata({
         params.lang === "fr" ? "Le Studio Maison M" : "The Studio Maison M",
       description:
         params.lang === "fr"
-          ? "Enregistrer vos chansons avec nos microphones sélectionnés avec soin et nos instruments de haute qualité. (Vous pouvez aussi utiliser le studio pour répéter ou bien créer du contenu pour les réseaux sociaux.)"
-          : "Record your songs using our carefully selected microphones and our top-tier instruments. (You can also use the space for rehearsals or create social media content.)",
+          ? "Enregistrez vos chansons avec nos microphones sélectionnés avec soin et nos instruments de haute qualité."
+          : "Record your songs using our carefully selected microphones and our top-tier instruments.",
       siteName: "Studio Maison M",
       images: [
         {

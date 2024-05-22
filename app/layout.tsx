@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     default: "Studio Maison M",
   },
   description:
-    "Record your songs using our carefully selected microphones and our top-tier instruments. (You can also use the space for rehearsals or create social media content.)",
+    "Record your songs using our carefully selected microphones and our top-tier instruments.",
 };
 
 export default function RootLayout({

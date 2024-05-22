@@ -11,8 +11,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: "Studio Maison M",
     description:
       params.lang === "fr"
-        ? "Enregistrer vos chansons avec nos microphones sélectionnés avec soin et nos instruments de haute qualité. (Vous pouvez aussi utiliser le studio pour répéter ou bien créer du contenu pour les réseaux sociaux.)"
-        : "Record your songs using our carefully selected microphones and our top-tier instruments. (You can also use the space for rehearsals or create social media content.)",
+        ? "Enregistrez vos chansons avec nos microphones sélectionnés avec soin et nos instruments de haute qualité."
+        : "Record your songs using our carefully selected microphones and our top-tier instruments.",
     metadataBase: new URL("https://studio-maison-m.com"),
     alternates: {
       canonical: "/",
